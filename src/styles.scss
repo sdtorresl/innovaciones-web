@@ -1,6 +1,12 @@
 @import "~bootstrap/scss/bootstrap";
 @import 'variables';
 
+@import './assets/fontawesome/fontawesome.scss';
+@import './assets/fontawesome/fa-light.scss';
+@import './assets/fontawesome/fa-regular.scss';
+@import './assets/fontawesome/fa-solid.scss';
+
+
 * {
     font-family: $font;
 }
