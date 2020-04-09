@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
+## Installation
+
+Run the `npm install` command in order to install the project:
+
+```bash
+git clone https://github.com/sdtorresl/innovaciones-web.git
+cd innovaciones-web
+npm install
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
