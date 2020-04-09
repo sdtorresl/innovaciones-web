@@ -1,10 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
-@import 'variables';
+@import '~bootstrap/scss/bootstrap';
 
-@import './assets/fontawesome/fontawesome.scss';
-@import './assets/fontawesome/fa-light.scss';
-@import './assets/fontawesome/fa-regular.scss';
-@import './assets/fontawesome/fa-solid.scss';
+@import './fontawesome/fontawesome';
+@import './fontawesome/fa-light';
+@import 'variables';
 
 
 * {
