@@ -50,6 +50,10 @@ nav {
         width: auto;
         height: 2rem;
     }
+
+}
+#logo-text {
+    font-size: 1.3rem;
 }
 
 @media #{$medium-and-up} {
@@ -67,6 +71,22 @@ nav {
     .logo-container {
         img {
             height: 3rem;
+        }
+    }
+}
+
+@media #{$extra-large-and-up} {
+    .navbar {
+        padding: 0 3rem;
+
+        .nav-item {
+            height: 75px;
+        }
+
+        .nav-link {
+            padding: 0 2rem;
+            height: 75px;
+            line-height: 75px;
         }
     }
 }
