@@ -14,6 +14,7 @@ import { ProyectItemComponent } from './components/proyect-item/proyect-item.com
 import { ServiceItemComponent } from './components/service-item/service-item.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
+import { DesignProcessComponent } from './components/designt-process/design-process.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SolutionsComponent } from './components/solutions/solutions.component';
     ProyectItemComponent,
     ServiceItemComponent,
     SliderComponent,
-    SolutionsComponent
+    SolutionsComponent,
+    DesignProcessComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+@import 'variables';
+
+.stage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 1.5rem 0;
+    padding: 1rem;
+
+    &:hover {
+        cursor: pointer;
+
+        figure {
+            transform: scale(1.1) rotate(360deg);
+        }
+    }
+
+    figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        transition: 0.5s ease-in-out;
+
+        img {
+            height: 75px;
+        }
+    }
+
+    .description {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
