@@ -3,7 +3,7 @@
 @import './fontawesome/fontawesome';
 @import './fontawesome/fa-light';
 @import 'variables';
-
+@import 'mixins';
 
 * {
     font-family: $font;
@@ -13,14 +13,10 @@ h1, h2, h3, h4, h5 {
     font-family: $font-bold;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { }
+@media #{$small-and-up} { }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { }
+@media #{$medium-and-up} { }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { }
+@media #{$large-and-up} { }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { }
+@media #{$extra-large-and-up} { }

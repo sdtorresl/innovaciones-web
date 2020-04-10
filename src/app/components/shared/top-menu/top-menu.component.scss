@@ -1,10 +1,72 @@
+@import 'variables';
+
 nav {
+    border-bottom: 1px solid $secondary-color-lightest;
+    padding: 0;
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+    }
+
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        font-family: $font-bold;
+        margin: 0 1rem 0 1rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        transition: 0.25s ease-in-out;
+        
+        &:hover {
+            background-color: $primary-color;
+
+            .nav-link {
+                color: white;
+            }
+        }
+    }
     
+    .nav-link {
+        text-transform: uppercase;
+        font-family: $secondary-font;
+        width: 100%;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
 }
 
 .logo-container {
+    margin: 0 1rem 0 0;
+
     img {
         width: auto;
-        height: 50px;
+        height: 2rem;
+    }
+}
+
+@media #{$medium-and-up} {
+    nav {
+        .nav-item {
+            height: 58px;
+        }
+        
+        .nav-link {
+            line-height: 58px;
+            padding: 0 1rem;
+        }
+    }
+
+    .logo-container {
+        img {
+            height: 3rem;
+        }
     }
 }
