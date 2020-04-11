@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('~/assets/font/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreamsBold';
+    src: url('~/assets/font/CaviarDreams_Bold.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreamsBoldItalic';
+    src: url('~/assets/font/CaviarDreams_BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'CaviarDreamsItalic';
+    src: url('~/assets/font/CaviarDreams_Italic.ttf');
+}
+
+@font-face {
+    font-family: 'DolceVita';
+    src: url('~/assets/font/DolceVita.ttf');
+}
+
+@font-face {
+    font-family: 'DolceVitaBold';
+    src: url('~/assets/font/DolceVitaBold');
+}
+
+@font-face {
+    font-family: 'DolceVitaLight';
+    src: url('~/assets/font/DolceVitaLight.ttf');
+}
+
+$font: 'CaviarDreams';
+$font-bold: 'CaviarDreamsBold';
+$font-italic: 'CaviarDreamsItalic';
+$font-bold-italic: 'CaviarDreamsBoldItalic';
+
+$secondary-font: 'DolceVita';
+$secondary-font-bold: 'DolceVitaBold';
+$secondary-font-light: 'DolceVitaLight';
+
+$primary-color: #089ADF;
+$primary-color-light: #FBFBFB;
+$secondary-color: #515151;
+$secondary-color-light: #979797;
+$secondary-color-lightest: #e3e3e3;
+
+$small-devices: 576px;
+$medium-devices: 768px;
+$large-devices: 992px;
+$extra-large-devices: 1200px;
+
+$small-and-up: "screen and (min-width: #{$small-devices})" !default;
+$medium-and-up: "screen and (min-width: #{$medium-devices})" !default;
+$large-and-up: "screen and (min-width: #{$large-devices})" !default;
+$extra-large-and-up: "screen and (min-width: #{$extra-large-devices})" !default;
