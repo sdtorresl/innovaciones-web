@@ -1,0 +1,20 @@
+$scale: 4;
+
+.container {
+    margin: 0px;
+}
+
+#product .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //background: green;
+    box-sizing: border-box;
+    height: 430px/$scale*2;
+    width: 384px/$scale;
+    border: 1px solid #D8D8D8;
+} 
+
+.item { 
+    border: 1px solid black;
+}
