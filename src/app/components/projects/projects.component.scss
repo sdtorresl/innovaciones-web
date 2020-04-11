@@ -1,0 +1,112 @@
+@import 'variables';
+
+$gap-size: 1rem;
+$image-size: 250px;
+
+.projects {
+    display: grid;
+    grid-auto-rows: $image-size;
+    grid-gap: $gap-size;
+    grid-auto-flow: row dense;
+    
+    .project-item {
+        overflow: hidden;
+        position: relative;
+        
+        &:nth-child(n) {
+            grid-row: span 1;
+        }
+
+        &:nth-child(5n+2) {
+            grid-row: span 2;
+
+            figure {
+                height: 100%;
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+        
+        .project-intro {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(#4d4d4d55, #00000055);
+
+            .project-title {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-description {
+                text-align: center;
+            }
+
+            .read-more {
+                color: white;
+                border-color: white;
+
+                &:hover {
+                    border-color: $primary-color;
+                }
+            }
+
+            .hidden {
+                height: 0;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                transition: 0.25s linear;
+                max-height: 180px;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .hidden {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media #{$small-and-up} {
+    .projects {
+        $num-columns: 1;
+        grid-template-columns: repeat($num-columns, 1fr);
+    }
+}
+
+@media #{medium-and-up} {
+    .projects {
+        $num-columns: 2;
+        grid-template-columns: repeat($num-columns, 1fr);
+    }
+}
+
+@media #{$large-and-up} {
+    .projects {
+        $num-columns: 3;
+        grid-template-columns: repeat($num-columns, 1fr);
+    }
+}
+
+@media #{$extra-large-and-up} {
+    .projects {
+        $num-columns: 3;
+        grid-template-columns: repeat($num-columns, 1fr);
+    }
+}
