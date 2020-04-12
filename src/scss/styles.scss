@@ -10,6 +10,10 @@
     font-size: 1rem;
 }
 
+body {
+    padding-top: 75px;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: $font-bold;
     text-transform: uppercase;
@@ -30,7 +34,7 @@ figure {
     margin: 0;
 }
 
-.read-more {
+.read-more, .submit, button {
     border: 2px solid black;
     color: black;
     font-family: $font-bold;
@@ -38,6 +42,7 @@ figure {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     transition: 0.2s ease-in-out;
+    background: transparent;
 
     &:hover {
         background: $primary-color;

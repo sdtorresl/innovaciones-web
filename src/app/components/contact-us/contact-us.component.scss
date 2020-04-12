@@ -1,0 +1,40 @@
+@import 'variables';
+
+#contact-us {
+
+    #contact-form {
+        position: relative;
+        padding-left: 50px;
+    }
+
+    #title {
+        transform-origin: 0 100%;
+        border-bottom: 2px solid #515151;
+        margin: 0;
+        padding: 5px 20px;
+        position: absolute;
+        top: 0;
+        top: 35%;
+        transform: rotate(-90deg);
+    }
+    form {
+        label {
+            font-family: $font-bold;
+        }
+
+        .form-control {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 0.1rem solid $secondary-color-light;
+            border-radius: 0;
+            transition: 0.1s linear;
+            padding: 0;
+
+            &:focus {
+                border-bottom-color: $primary-color;
+                box-shadow: none;
+            }
+        }
+    }
+}
