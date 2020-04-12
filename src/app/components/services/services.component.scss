@@ -1,20 +1,66 @@
-$scale: 4;
+@import "variables";
 
-.container {
+#service {
     margin: 0px;
-}
+    max-width: 100%;
 
-#product .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    //background: green;
-    box-sizing: border-box;
-    height: 430px/$scale*2;
-    width: 384px/$scale;
-    border: 1px solid #D8D8D8;
-} 
+    #intro {
+        height: 400px;
+        background: url('~/assets/img/desk.png') no-repeat;
+        background-size: 70%;
+        [class^='col'] {
+            background-image: linear-gradient(206.57deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
+            height: 80%;
+            padding-left: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.item { 
-    border: 1px solid black;
+        p {
+            width: 70%;
+        }
+    }
+
+
+
+
+
+
+    .item {
+        height: 310px;
+        border: 1px solid #D8D8D8;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .item-title {
+        font-family: $font-bold;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+    }
+
+    .item-title::before {
+        content: '';
+        position: absolute;
+        background-image: linear-gradient(#5BFFF4, $primary-color);
+        height: 2px;
+        bottom: -10px;
+        left: 5px;
+        right: 5px;
+    }
+
+    i {
+        font-size: 35px;
+        margin: 20px;
+    }
+
+    #laptop-img {
+        background: url('~/assets/img/laptop.png') no-repeat 100% center;
+        background-size: cover;
+    }
 }
