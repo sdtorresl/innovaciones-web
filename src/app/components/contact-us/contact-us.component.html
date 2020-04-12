@@ -19,20 +19,20 @@
     <div class="col-sm-11 col-md-6">
       <form>
         <div class="form-group">
-          <label for="name">Nombre</label>
-          <input type="email" class="form-control" id="name" aria-describedby="emailHelp">
+          <input #nameInput (change)="true" type="text" class="form-control" id="name">
+          <label for="name" [class.active]="nameInput.value">Nombre</label>
         </div>
         <div class="form-group">
-          <label for="name">Teléfono</label>
-          <input type="number" class="form-control" id="name" aria-describedby="emailHelp">
+          <input type="tel" class="form-control" id="name"  #phoneInput (change)="true">
+          <label for="name" [class.active]="phoneInput.value">Teléfono</label>
         </div>
         <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" class="form-control" id="email">
+          <input #emailInput (change)="true" type="email" class="form-control" id="email">
+          <label for="email" [class.active]="emailInput.value">Correo electrónico</label>
         </div>
         <div class="form-group">
-          <label for="message">Mensaje</label>
-          <textarea class="form-control" id="message"></textarea>
+          <textarea #messageInput (change)="true" rows="3" class="form-control" id="message"></textarea>
+          <label for="message" [class.active]="messageInput.value">Mensaje</label>
         </div>
 
         <div class="d-flex justify-content-end">

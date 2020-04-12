@@ -1,5 +1,11 @@
 @import 'variables';
 
+%active-label {
+    color: $primary-color;
+    top: -0.5rem;
+    font-size: 0.8rem;
+}
+
 #contact-us {
 
     #contact-form {
@@ -13,28 +19,60 @@
         margin: 0;
         padding: 5px 20px;
         position: absolute;
-        top: 0;
-        top: 35%;
+        top: 60%;
         transform: rotate(-90deg);
     }
+
     form {
-        label {
-            font-family: $font-bold;
-        }
+        .form-group {
+            position: relative;
 
-        .form-control {
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-bottom: 0.1rem solid $secondary-color-light;
-            border-radius: 0;
-            transition: 0.1s linear;
-            padding: 0;
+            label {
+                font-family: $font-bold;
+                position: absolute;
+                left: 0%;
+                top: 0.5rem;
+                font-size: 1rem;
+                color: $secondary-color-light;
+                transition: all 0.5s ease;
+                z-index: -1;
 
-            &:focus {
-                border-bottom-color: $primary-color;
-                box-shadow: none;
+                &.active {
+                    @extend %active-label;
+                    color: black;
+                }
+            }
+
+            .form-control {
+                border: 0;
+                min-height: 40px;
+                border-bottom: 0.1rem solid $secondary-color-light;
+                border-radius: 0;
+                background: transparent;
+                padding: 10px 0px;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background: red;
+                }
+    
+                &:focus {
+                    border-bottom-color: $primary-color;
+                    box-shadow: none;
+    
+                    ~ label, + label {
+                        @extend %active-label;
+                    }
+                }
             }
         }
+
+
     }
 }
