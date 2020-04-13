@@ -5,13 +5,24 @@
     max-width: 100%;
 
     #intro {
-        height: 400px;
-        background: url('~/assets/img/desk.png') no-repeat;
-        background-size: 70%;
-        [class^='col'] {
+        position: relative;
+        padding-top: 50px;
+
+        #intro-img {
+            //background-color: blue;
+            top: 0px;
+            left: 0px;
+            right: 30%;
+            bottom: 0px;
+            position: absolute;
+            background: url('~/assets/img/desk.png') no-repeat;
+            background-size: cover;
+        }
+
+        #description {
             background-image: linear-gradient(206.57deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
             height: 80%;
-            padding-left: 40px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,6 +53,7 @@
         text-transform: uppercase;
         text-align: center;
         position: relative;
+        width: min-content;
     }
 
     .item-title::before {
@@ -60,7 +72,7 @@
     }
 
     #laptop-img {
-        background: url('~/assets/img/laptop.png') no-repeat 100% center;
+        background: url('~/assets/img/laptop.png') no-repeat right;
         background-size: cover;
     }
 }
