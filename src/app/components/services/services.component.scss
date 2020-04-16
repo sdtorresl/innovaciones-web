@@ -8,7 +8,7 @@
         position: relative;
 
         .text-white {
-            margin: 40px 0px;
+            //margin: 40px 0px;
         }
 
         #intro-img {
@@ -23,17 +23,22 @@
 
         #description {
             background-image: linear-gradient(206.57deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
-            padding: 40px;
+            padding: 60px 40px;
+        }
+
+        p {
+            padding-top: 8px;
+            padding-bottom: 50px;
         }
 
         .more {
             font-family: $font-bold;
-            padding-left: 10px;
+            font-size: 1.2rem;
             transition: 0.2s ease-in-out;
         
             &:hover {
                 padding-left: 30px;
-                text-decoration: none;
+                //text-decoration: none;
             }
         }
     }
