@@ -1,0 +1,211 @@
+@import "variables";
+
+#products {
+    margin: 0px;
+    max-width: 100%;
+
+    .blue-text {
+        color: $primary-color;
+        font-family: $font-bold;
+        font-size: 1.5rem;
+    }
+
+    #section-1 {
+        .text-body {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        .blue-text {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    }
+
+    #section-2 {
+        background-image: linear-gradient(236.13deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
+        padding: 20px 0px;
+
+        .sol-item {
+            background-color: white;
+            height: 550px;
+            width: 340px;
+            padding: 40px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            p {
+                margin-top: 2rem;
+            }
+    
+            ul {
+                padding-left: 15px;
+            }
+
+            li {
+                padding-top: 14px;
+                padding-left: 5px;;
+            }
+    
+            .price {
+                font-size: 1.5rem;
+                font-family: "CaviarDreamsBold";
+                position: absolute;
+                bottom: 105px;
+            }
+    
+            .more {
+                background: #FF326A;
+                padding: 12px 30px;
+                text-transform: uppercase;
+                text-decoration: none;
+                position: absolute;
+                bottom: 35px;
+            }
+        }
+    }
+
+    #section-3  {
+        padding: 110px 20px 70px 20px;
+        position: relative;
+
+        h2 {
+            color: black;
+            text-align: left;
+            font-size: 1.9rem;
+            position: relative;
+            margin-bottom: 35px;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            background-image: linear-gradient(#5BFFF4, $primary-color);
+            height: 4px;
+            top: -20px;
+            left: 0px;
+            width: 200px;
+        }
+    }
+
+    #section-3::after {
+        background: url('~/assets/img/notebook_2.jpg') no-repeat left;
+        background-size: cover;
+        content: "";
+        top: -110px;
+        left: -50px;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    #section-4 {
+        h2 {
+            color: black;
+            font-size: 1.4rem;
+            margin-top: 70px;
+        }
+
+        .sub-item {
+            //border: 1px black solid;
+            padding: 40px;
+            position: relative;
+
+            i {
+                font-size: 2rem;
+                padding: 5px;
+            }
+
+            .product-content {
+                max-width: 350px;
+            }
+
+            .product-title {
+                text-transform: uppercase;
+                font-family: "CaviarDreamsBold";
+                font-size: 1.5rem;
+                position: relative;
+                margin-bottom: 15px;
+            }
+
+            .product-title::before {
+                content: '';
+                position: absolute;
+                background-image: linear-gradient(#5BFFF4, $primary-color);
+                height: 2px;
+                bottom: -1px;
+                left: 0px;
+                width: 130px;
+            }
+        }
+    }
+
+
+
+    [class^="col"] {
+        //border: 1px black solid;
+    }
+}
+
+
+@media #{$small-and-up} {
+    #products {
+        #section-1 {
+            padding: 20px 0px;
+        }
+    }
+ }
+
+@media #{$medium-and-up} {
+    #products {
+        #section-1 {
+            padding: 60px 0px;
+        }
+
+        #section-2 {
+            padding: 70px 0px;
+        }
+
+        #section-3 {
+            padding: 170px 20px 100px 20px;
+        }
+    }
+    
+}
+
+@media #{$large-and-up} { }
+
+@media #{$extra-large-and-up} {
+    #products {
+        #section-1 {
+            padding-top: 130px;
+            padding-bottom: 100px;
+
+            .text-body {
+                margin-bottom: 50px;
+            }
+
+            .blue-text {
+                margin-top: 70px;
+            }
+        }
+
+        #section-3 {
+            padding: 290px 20px 280px 20px;
+
+            h2 {
+                margin-bottom: 50px;
+            }
+        }
+
+        #section-3::after {
+            top: -200px;
+        }
+    }
+    
+}
