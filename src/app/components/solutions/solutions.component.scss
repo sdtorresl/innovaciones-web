@@ -37,6 +37,13 @@
             align-items: center;
             position: relative;
 
+            h3 {
+                text-transform: none;
+                margin: 0;
+                color: $primary-color;
+                font-size: 1.5rem;
+            }
+
             p {
                 margin-top: 2rem;
             }
@@ -52,7 +59,7 @@
     
             .price {
                 font-size: 1.5rem;
-                font-family: "CaviarDreamsBold";
+                font-family: $font-bold;
                 position: absolute;
                 bottom: 105px;
             }
@@ -106,11 +113,14 @@
     }
 
     #section-4 {
-        h2 {
+        #product-intro {
             color: black;
             font-size: 1.4rem;
             margin-top: 70px;
             text-transform: none;
+            font-family: $font-bold;
+            text-align: center;
+            line-height: 1.2;
         }
 
         #products-section {
@@ -158,8 +168,9 @@
                 font-family: "CaviarDreamsBold";
                 font-size: 1.5rem;
                 position: relative;
-                margin-bottom: 15px;
-                margin-left: 45px;
+                margin: 0px 0px 15px 45px;
+                text-align: left;
+                line-height: 1.5;
             }
 
             .product-title::before {
