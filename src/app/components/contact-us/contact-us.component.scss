@@ -6,73 +6,115 @@
     font-size: 0.8rem;
 }
 
-#contact-us {
+.contact-data {
+    p {
+        margin-bottom: 0.1rem;
+        text-align: center;
+    }
+}
+
+#title {
+    width: 100%;
+}
+
+form {
+    .form-group {
+        position: relative;
+
+        label {
+            font-family: $font-bold;
+            position: absolute;
+            left: 0%;
+            top: 0.5rem;
+            font-size: 1rem;
+            color: $secondary-color-light;
+            transition: all 0.5s ease;
+            z-index: -1;
+
+            &.active {
+                @extend %active-label;
+                color: black;
+            }
+        }
+
+        .form-control {
+            border: 0;
+            min-height: 40px;
+            border-bottom: 0.1rem solid $secondary-color-light;
+            border-radius: 0;
+            background: transparent;
+            padding: 10px 0px;
+            position: relative;
+
+            &.invalid {
+                border-color: $error-color;
+
+                &~.label, &+label {
+                    color: $error-color;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: red;
+            }
+
+            &:focus {
+                border-bottom-color: $primary-color;
+                box-shadow: none;
+
+                ~ label, + label {
+                    @extend %active-label;
+                }
+            }
+        }
+    }
+}
+
+@media #{$medium-and-up} {
+    .contact-data {
+        p {
+            margin-bottom: 0.2rem;
+            text-align: left;
+        }
+    }
 
     #contact-form {
         position: relative;
+        padding-top: 25px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+    }
+
+    #title {
+        position: absolute;
+        width: auto;
+        transform-origin: 0% 100%;
+        border-bottom: 2px solid #515151;
+        margin: -25px -15px;
+        padding: 15px 40px;
+        top: 55%;
+        transform: rotate(-90deg);
+    }
+}
+
+@media #{$large-and-up} {
+    #contact-form {
         padding-left: 50px;
     }
 
     #title {
-        transform-origin: 0 100%;
+        transform-origin: 0% 100%;
         border-bottom: 2px solid #515151;
-        margin: 0;
-        padding: 5px 20px;
+        margin: -25px -15px;
+        padding: 15px 40px;
         position: absolute;
-        top: 60%;
+        top: 55%;
         transform: rotate(-90deg);
-    }
-
-    form {
-        .form-group {
-            position: relative;
-
-            label {
-                font-family: $font-bold;
-                position: absolute;
-                left: 0%;
-                top: 0.5rem;
-                font-size: 1rem;
-                color: $secondary-color-light;
-                transition: all 0.5s ease;
-                z-index: -1;
-
-                &.active {
-                    @extend %active-label;
-                    color: black;
-                }
-            }
-
-            .form-control {
-                border: 0;
-                min-height: 40px;
-                border-bottom: 0.1rem solid $secondary-color-light;
-                border-radius: 0;
-                background: transparent;
-                padding: 10px 0px;
-                position: relative;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                    background: red;
-                }
-    
-                &:focus {
-                    border-bottom-color: $primary-color;
-                    box-shadow: none;
-    
-                    ~ label, + label {
-                        @extend %active-label;
-                    }
-                }
-            }
-        }
-
-
     }
 }
