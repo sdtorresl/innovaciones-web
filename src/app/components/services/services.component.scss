@@ -13,7 +13,7 @@
             right: 30%;
             bottom: 0px;
             position: absolute;
-            background: url('~/assets/img/desk.png') no-repeat;
+            background: url('/assets/img/desk.png') no-repeat;
             background-size: cover;
         }
 
@@ -97,7 +97,7 @@
     }
 
     #laptop-img {
-        background: url('~/assets/img/laptop.png') no-repeat right;
+        background: url('/assets/img/laptop.png') no-repeat right;
         background-size: cover;
     }
 }
