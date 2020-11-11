@@ -77,6 +77,42 @@ form {
 }
 
 @media #{$medium-and-up} {
+    #contact-us {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    #contact-data-wrapper {
+        background: url('/assets/img/notebook.jpg');
+        background-size: auto 100%;
+        background-position: 70% 0;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+
+        .container {
+            margin: 0;
+            padding: 2rem 1rem 2rem 10rem;
+            background-color: black;
+            color: white;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -50px;
+                content: '';
+                width: 50px;
+                background-color: black;
+            }
+        }
+    }
+
     .contact-data {
         p {
             margin-bottom: 0.2rem;
@@ -86,35 +122,30 @@ form {
 
     #contact-form {
         position: relative;
-        padding-top: 25px;
-        padding-left: 20px;
-        padding-bottom: 50px;
+        flex: 1;
     }
 
     #title {
-        position: absolute;
-        width: auto;
         transform-origin: 0% 100%;
         border-bottom: 2px solid #515151;
-        margin: -25px -15px;
-        padding: 15px 40px;
+        margin: 15px -15px;
+        padding: 15px 25px;
+        position: absolute;
         top: 55%;
         transform: rotate(-90deg);
+        width: auto;
     }
 }
 
 @media #{$large-and-up} {
-    #contact-form {
-        padding-left: 50px;
-    }
-
     #title {
         transform-origin: 0% 100%;
         border-bottom: 2px solid #515151;
-        margin: -25px -15px;
-        padding: 15px 40px;
+        margin: 15px -15px;
+        padding: 15px 18px;
         position: absolute;
         top: 55%;
         transform: rotate(-90deg);
+        width: auto;
     }
 }

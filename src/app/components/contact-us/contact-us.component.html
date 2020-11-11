@@ -1,24 +1,30 @@
 <div id="contact-us" class="container">
-  <div class="intro">
-    <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
-    <div class="row">
-      <p class="col">Completa los campos en el formulario y conoce como puedes empezar la transformación digital de tu
-        negocio con una solución ajustada a tus necesidades y presupuesto.</p>
-    </div>
-  </div>
+  
 
   <div id="contact-form" class="row">
     
-    <h3 id="title">Contáctanos</h3>
+    <aside id="contact-data-wrapper" class="col-sm-12 col-md-5 d-none d-flex flex-column justify-content-center">
+      <div class="container">
+        <h3 id="title">Contáctanos</h3>
+    
+        <div class="contact-data">
+          <p class="location">Colombia (Medellín, Bogotá, Pereira)</p>
+          <p class="phone">(+57) 3154427962</p>
+          <p class="mail">soluciones@innovaciones.co</p>
+          <p class="web-page"><a href="https://innovaciones.co">www.innovaciones.co</a></p>
+        </div>
+      </div>
+    </aside>
 
-    <div class="contact-data col-md-5 mt-5 d-none d-md-block">
-      <p class="location">Colombia (Medellín, Bogotá, Pereira)</p>
-      <p class="phone">(+57) 3154427962</p>
-      <p class="mail">soluciones@innovaciones.co</p>
-      <p class="web-page"><a href="https://innovaciones.co">www.innovaciones.co</a></p>
-    </div>
-
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 offset-1 d-flex flex-column justify-content-center">
+      <div class="row mt-5">
+        <div class="intro">
+          <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
+          <div class="row">
+            <p class="col">Si deseas conocer más acerca de nuestra empresa y/o servicios, puedes contactarte con nuestro equipo, diligenciando el formulario. Atenderemos personalizadamente tus inquietudes de la manera mas pronta posible.</p>
+          </div>
+        </div>
+      </div>
       <form [formGroup]="contactForm" (ngSubmit)="submit()">
         <div class="form-group">
           <input 

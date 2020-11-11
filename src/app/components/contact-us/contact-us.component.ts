@@ -43,6 +43,6 @@ export class ContactUsComponent implements OnInit {
   }
 
   get emailInvalid() {
-    return this.contactForm.get('mail').invalid && this.contactForm.get('mail').touched;
+    return this.contactForm.get('email').invalid && this.contactForm.get('email').touched;
   }
 }
