@@ -30,8 +30,29 @@ h2 {
     color: black;
 }
 
+.blue {
+    color: $primary-color;
+}
+
+.bg-blue-grad {
+    background-image: linear-gradient(236.13deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
+}
+
 figure {
     margin: 0;
+}
+
+.btn-more {
+    background: #FF326A;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    bottom: 35px;
+
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
 }
 
 .read-more, .submit, button {
