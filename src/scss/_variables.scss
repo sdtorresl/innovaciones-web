@@ -1,36 +1,36 @@
 @font-face {
     font-family: 'CaviarDreams';
-    src: url('~/assets/font/CaviarDreams.ttf');
+    src: url('/assets/font/CaviarDreams.ttf');
 }
 
 @font-face {
     font-family: 'CaviarDreamsBold';
-    src: url('~/assets/font/CaviarDreams_Bold.ttf');
+    src: url('/assets/font/CaviarDreams_Bold.ttf');
 }
 
 @font-face {
     font-family: 'CaviarDreamsBoldItalic';
-    src: url('~/assets/font/CaviarDreams_BoldItalic.ttf');
+    src: url('/assets/font/CaviarDreams_BoldItalic.ttf');
 }
 
 @font-face {
     font-family: 'CaviarDreamsItalic';
-    src: url('~/assets/font/CaviarDreams_Italic.ttf');
+    src: url('/assets/font/CaviarDreams_Italic.ttf');
 }
 
 @font-face {
     font-family: 'DolceVita';
-    src: url('~/assets/font/DolceVita.ttf');
+    src: url('/assets/font/DolceVita.ttf');
 }
 
 @font-face {
     font-family: 'DolceVitaBold';
-    src: url('~/assets/font/DolceVitaBold');
+    src: url('/assets/font/DolceVitaBold');
 }
 
 @font-face {
     font-family: 'DolceVitaLight';
-    src: url('~/assets/font/DolceVitaLight.ttf');
+    src: url('/assets/font/DolceVitaLight.ttf');
 }
 
 $font: 'CaviarDreams';
@@ -47,6 +47,10 @@ $primary-color-light: #FBFBFB;
 $secondary-color: #515151;
 $secondary-color-light: #979797;
 $secondary-color-lightest: #e3e3e3;
+
+$error-color: #ef9a9a;
+$success-color: #66bb6a;
+$info-color: #d4e157;
 
 $small-devices: 576px;
 $medium-devices: 768px;

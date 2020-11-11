@@ -1,38 +1,78 @@
 <div id="contact-us" class="container">
-  <div class="intro">
-    <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
-    <div class="row">
-      <p class="col">Completa los campos en el formulario y conoce como puedes empezar la transformación digital de tu
-        negocio con una solución ajustada a tus necesidades y presupuesto.</p>
-    </div>
-  </div>
+  
 
   <div id="contact-form" class="row">
-    <h3 id="title">Contáctanos</h3>
+    
+    <aside id="contact-data-wrapper" class="col-sm-12 col-md-5 d-none d-flex flex-column justify-content-center">
+      <div class="container">
+        <h3 id="title">Contáctanos</h3>
+    
+        <div class="contact-data">
+          <p class="location">Colombia (Medellín, Bogotá, Pereira)</p>
+          <p class="phone">(+57) 3154427962</p>
+          <p class="mail">soluciones@innovaciones.co</p>
+          <p class="web-page"><a href="https://innovaciones.co">www.innovaciones.co</a></p>
+        </div>
+      </div>
+    </aside>
 
-    <div class="col-md-5">
-      <p id="location">Colombia (Medellín, Bogotá, Pereira)</p>
-      <p id="phone">(+57) 3154427962</p>
-      <p id="mail">soluciones@innovaciones.co</p>
-      <p id="web-page"><a href="https://innovaciones.co">www.innovaciones.co</a></p>
-    </div>
-    <div class="col-sm-11 col-md-6">
-      <form>
+    <div class="col-sm-12 col-md-6 offset-1 d-flex flex-column justify-content-center">
+      <div class="row mt-5">
+        <div class="intro">
+          <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
+          <div class="row">
+            <p class="col">Si deseas conocer más acerca de nuestra empresa y/o servicios, puedes contactarte con nuestro equipo, diligenciando el formulario. Atenderemos personalizadamente tus inquietudes de la manera mas pronta posible.</p>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="contactForm" (ngSubmit)="submit()">
         <div class="form-group">
-          <input #nameInput (change)="true" type="text" class="form-control" id="name">
+          <input 
+              #nameInput
+              (change)="true"
+              type="text" 
+              class="form-control"
+              id="name"
+              [class.invalid]="nameInvalid"
+              formControlName="name">
           <label for="name" [class.active]="nameInput.value">Nombre</label>
+          <small *ngIf="nameInvalid" class="text-danger">Ingresa tu nombre completo</small>
         </div>
         <div class="form-group">
-          <input type="tel" class="form-control" id="name"  #phoneInput (change)="true">
-          <label for="name" [class.active]="phoneInput.value">Teléfono</label>
+          <input 
+              #phoneInput
+              (change)="true"
+              type="tel" 
+              class="form-control"
+              id="phone"
+              [class.invalid]="phoneInvalid"
+              formControlName="phone">
+          <label for="phone" [class.active]="phoneInput.value">Teléfono</label>
+          <small *ngIf="phoneInvalid" class="text-danger">Ingresa un teléfono válido</small>
         </div>
         <div class="form-group">
-          <input #emailInput (change)="true" type="email" class="form-control" id="email">
+          <input 
+              #emailInput
+              (change)="true"
+              type="mail" 
+              class="form-control"
+              id="email"
+              [class.invalid]="emailInvalid"
+              formControlName="email">
           <label for="email" [class.active]="emailInput.value">Correo electrónico</label>
+          <small *ngIf="emailInvalid" class="text-danger">Ingresa un correo válido</small>
         </div>
         <div class="form-group">
-          <textarea #messageInput (change)="true" rows="3" class="form-control" id="message"></textarea>
+          <textarea 
+              #messageInput
+              (change)="true"
+              rows="3" 
+              class="form-control"
+              id="message"
+              [class.invalid]="messageInvalid"
+              formControlName="message"></textarea>
           <label for="message" [class.active]="messageInput.value">Mensaje</label>
+          <small *ngIf="messageInvalid" class="text-danger">Valor inválido</small>
         </div>
 
         <div class="d-flex justify-content-end">
@@ -40,5 +80,13 @@
         </div>
       </form>
     </div>
+
+    <div class="contact-data col-md-5 mt-3 d-block d-md-none">
+      <p class="location">Colombia (Medellín, Bogotá, Pereira)</p>
+      <p class="phone">(+57) 3154427962</p>
+      <p class="mail">soluciones@innovaciones.co</p>
+      <p class="web-page"><a href="https://innovaciones.co">www.innovaciones.co</a></p>
+    </div>
+
   </div>
 </div>

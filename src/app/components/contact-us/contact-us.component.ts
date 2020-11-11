@@ -19,9 +19,9 @@ export class ContactUsComponent implements OnInit {
 
   buildForm() {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(5)]],
       phone: ['', [Validators.minLength(7), Validators.maxLength(15)]],
-      mail: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(100)]]
     });
   }
@@ -38,11 +38,11 @@ export class ContactUsComponent implements OnInit {
     return this.contactForm.get('phone').invalid && this.contactForm.get('phone').touched;
   }
 
-  get nmessageInvalid() {
-    return this.contactForm.get('nmessage').invalid && this.contactForm.get('nmessage').touched;
+  get messageInvalid() {
+    return this.contactForm.get('message').invalid && this.contactForm.get('message').touched;
   }
 
-  get mailInvalid() {
-    return this.contactForm.get('mail').invalid && this.contactForm.get('mail').touched;
+  get emailInvalid() {
+    return this.contactForm.get('email').invalid && this.contactForm.get('email').touched;
   }
 }
