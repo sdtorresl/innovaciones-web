@@ -80,11 +80,8 @@ form {
     #contact-us {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 75px;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        max-width: 100%;
+        margin: 0 -15px;
     }
 
     #contact-data-wrapper {
@@ -96,7 +93,7 @@ form {
 
         .container {
             margin: 0;
-            padding: 2rem 1rem 2rem 10rem;
+            padding: 3rem 1rem 3rem 10rem;
             background-color: black;
             color: white;
             position: relative;
@@ -128,7 +125,7 @@ form {
     #title {
         transform-origin: 0% 100%;
         border-bottom: 2px solid #515151;
-        margin: 15px -15px;
+        margin: 22px -15px;
         padding: 15px 25px;
         position: absolute;
         top: 55%;
@@ -141,7 +138,7 @@ form {
     #title {
         transform-origin: 0% 100%;
         border-bottom: 2px solid #515151;
-        margin: 15px -15px;
+        margin: 23px -15px;
         padding: 15px 18px;
         position: absolute;
         top: 55%;

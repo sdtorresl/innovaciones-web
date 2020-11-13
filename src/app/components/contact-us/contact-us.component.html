@@ -3,7 +3,7 @@
 
   <div id="contact-form" class="row">
     
-    <aside id="contact-data-wrapper" class="col-sm-12 col-md-5 d-none d-flex flex-column justify-content-center">
+    <aside id="contact-data-wrapper" class="col-sm-12 col-md-6 d-none d-flex flex-column justify-content-center">
       <div class="container">
         <h3 id="title">Contáctanos</h3>
     
@@ -16,7 +16,7 @@
       </div>
     </aside>
 
-    <div class="col-sm-12 col-md-6 offset-1 d-flex flex-column justify-content-center">
+    <div class="col-sm-12 col-md-4 offset-1 mb-5 d-flex flex-column justify-content-center">
       <div class="row mt-5">
         <div class="intro">
           <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="submit()">
-        <div class="form-group">
+        <div class="form-group row">
           <input 
               #nameInput
               (change)="true"
@@ -38,7 +38,7 @@
           <label for="name" [class.active]="nameInput.value">Nombre</label>
           <small *ngIf="nameInvalid" class="text-danger">Ingresa tu nombre completo</small>
         </div>
-        <div class="form-group">
+        <div class="form-group row">
           <input 
               #phoneInput
               (change)="true"
@@ -50,7 +50,7 @@
           <label for="phone" [class.active]="phoneInput.value">Teléfono</label>
           <small *ngIf="phoneInvalid" class="text-danger">Ingresa un teléfono válido</small>
         </div>
-        <div class="form-group">
+        <div class="form-group row">
           <input 
               #emailInput
               (change)="true"
@@ -62,7 +62,7 @@
           <label for="email" [class.active]="emailInput.value">Correo electrónico</label>
           <small *ngIf="emailInvalid" class="text-danger">Ingresa un correo válido</small>
         </div>
-        <div class="form-group">
+        <div class="form-group row">
           <textarea 
               #messageInput
               (change)="true"
@@ -72,11 +72,11 @@
               [class.invalid]="messageInvalid"
               formControlName="message"></textarea>
           <label for="message" [class.active]="messageInput.value">Mensaje</label>
-          <small *ngIf="messageInvalid" class="text-danger">Valor inválido</small>
+          <small *ngIf="messageInvalid" class="text-danger">Por favor, escribe tu mensaje</small>
         </div>
 
-        <div class="d-flex justify-content-end">
-          <button type="submit" class="submit btn btn-primary">Enviar <i class="fal fa-chevron-right"></i></button>
+        <div class="d-flex justify-content-center mt-4 row">
+          <button type="submit" class="submit btn btn-primary">Quiero transformar mi negocio <i class="fal fa-chevron-right"></i></button>
         </div>
       </form>
     </div>
