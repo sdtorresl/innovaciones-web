@@ -17,6 +17,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { TopMenuComponent } from './components/shared/top-menu/top-menu.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { ItemsTemplateComponent } from './components/items-template/items-template.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BannerComponent } from './components/banner/banner.component';
     SliderComponent,
     SolutionsComponent,
     TopMenuComponent,
-    BannerComponent
+    BannerComponent,
+    ItemsTemplateComponent
   ],
   imports: [
     BrowserModule,
