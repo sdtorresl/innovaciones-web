@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-items-template',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items-template.component.scss']
 })
 export class ItemsTemplateComponent implements OnInit {
+
+  @Input() intro : string;
+  @Input() icon : string;
+  @Input() title : string;
+  @Input() itemDescription : string;
 
   constructor() { }
 

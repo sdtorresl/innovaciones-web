@@ -47,7 +47,21 @@
         [image]="'/assets/img/notebook_2.jpg'">
     </app-banner>
 
-    <app-items-template></app-items-template>
+    <app-items-template [intro]="'En Innovaciones creamos productos digitales para impulsar tu negocio'"
+        [icon]="['fal fa-user-alt', 
+            'fal fa-mobile', 
+            'fal fa-ruler', 
+            'fal fa-wrench']"
+        [title]="['Consultorias', 
+            'Desarrollo de aplicaciones', 
+            'Diseño e imagen corporativa', 
+            'Soporte y mantenimiento']"
+        [itemDescription]="['1Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.', 
+            '2Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.', 
+            '3Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.', 
+            '4Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.']"
+    ></app-items-template>
+    
 </div>
 
 <div id="contact-container">
