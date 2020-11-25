@@ -6,10 +6,10 @@ import { HomeComponent } from './components/home/home.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'solutions', component: SolutionsComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact-us', component: ContactUsComponent },
+  { path: '', component: HomeComponent, data: {animation: 'home'} },
+  { path: 'solutions', component: SolutionsComponent, data: {animation:'solutions'} },
+  { path: 'about', component: AboutComponent, data: {animation:'about'} },
+  { path: 'contact-us', component: ContactUsComponent, data: {animation: 'contact-us'} },
 ];
 
 @NgModule({
