@@ -82,6 +82,7 @@ form {
         flex-direction: column;
         max-width: 100%;
         margin: 0 -15px;
+        height: calc(100vh - 75px);
     }
 
     #contact-data-wrapper {
