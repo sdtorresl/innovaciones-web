@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,6 +18,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { TopMenuComponent } from './components/shared/top-menu/top-menu.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { AppearDirective } from './directives/appear.directive';
 
 @NgModule({
   declarations: [
@@ -32,10 +34,12 @@ import { BannerComponent } from './components/banner/banner.component';
     SliderComponent,
     SolutionsComponent,
     TopMenuComponent,
-    BannerComponent
+    BannerComponent,
+    AppearDirective
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
