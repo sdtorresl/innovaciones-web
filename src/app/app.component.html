@@ -1,5 +1,5 @@
 <app-top-menu></app-top-menu>
 
-<div [@routeAnimations]="prepareRoute(outlet)">
+<div [@routeAnimations]="prepareRoute(outlet)" style="position: relative;">
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
