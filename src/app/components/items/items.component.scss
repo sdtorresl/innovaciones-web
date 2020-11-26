@@ -1,0 +1,130 @@
+@import "variables";
+
+.solutions-products {
+  padding-top: 70px;
+  padding-bottom: 25px;
+
+  #product-intro {
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    text-transform: none;
+    font-family: $font-bold;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  #products-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  #products-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    padding: 0px;
+    max-width: 1300px;
+  }
+
+  .product-item {
+    padding: 15px 30px;
+    position: relative;
+
+    i {
+      font-size: 2rem;
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 2.2rem;
+      left: 3.2rem;
+    }
+
+    .product-content {
+      max-width: 350px;
+      box-shadow: 1px 1px 3px gray;
+      padding: 25px;
+    }
+
+    .product-title {
+      text-transform: uppercase;
+      font-family: "CaviarDreamsBold";
+      font-size: 1.5rem;
+      position: relative;
+      margin: 0px 0px 15px 45px;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .product-title::before {
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(#5BFFF4, $primary-color);
+      height: 2px;
+      bottom: -1px;
+      left: 0px;
+      width: 130px;
+    }
+  }
+}
+
+@media #{$small-and-up} {
+  .solutions-products {
+    padding-top: 90px;
+    padding-bottom: 70px;
+
+    #product-intro {
+      margin-bottom: 50px;
+    }
+
+    .product-item {
+      display: flex;
+      padding: 20px 30px;
+
+      i {
+        position: static;
+        font-size: 6rem;
+        width: 10rem;
+        height: 10rem;
+      }
+
+      .product-content {
+        box-shadow: none;
+        padding: 10px;
+      }
+
+      .product-title {
+        margin-left: 0px;
+      }
+
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  .solutions-products {
+    padding-top: 120px;
+    padding-bottom: 30px;
+
+    #product-intro {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media #{$extra-large-and-up} {
+  .solutions-products {
+    padding-top: 140px;
+    padding-bottom: 60px;
+
+    #product-intro {
+      margin-bottom: 90px;
+    }
+  }
+}
