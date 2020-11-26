@@ -19,6 +19,7 @@ import { SolutionsComponent } from './components/solutions/solutions.component';
 import { TopMenuComponent } from './components/shared/top-menu/top-menu.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AppearDirective } from './directives/appear.directive';
+import { ItemsComponent } from './components/items/items.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AppearDirective } from './directives/appear.directive';
     SolutionsComponent,
     TopMenuComponent,
     BannerComponent,
-    AppearDirective
+    AppearDirective,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,

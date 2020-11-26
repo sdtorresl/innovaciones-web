@@ -1,1 +1,14 @@
-<h1>Nosotros</h1>
+<div id="about" class="">
+
+    <app-banner 
+        [title]="'ESCALAMOS CONTIGO ¿CÓMO LO HACEMOS?'" 
+        [description]="'Innovaciones es una empresa con un equipo interdisciplinar, buscamos mejorar y hacer crecer tu negocio mediante la aplicación de nuevas tecnologías, con estándares de alta calidad y enfoques en la mejora continua.'" 
+        [image]="'/assets/img/notebook_2.jpg'">
+    </app-banner>
+    
+    <app-items [items]="advantages" [intro]="intro"></app-items>
+</div>
+
+<aside class="mt-5">
+    <app-contact-us></app-contact-us>
+</aside>

@@ -1,0 +1,19 @@
+<section class="solutions-products">
+    <div class="row justify-content-center">
+        <div class="col-10 col-sm-9 col-md-7 col-lg-6 col-xl-4">
+            <div id="product-intro">{{ intro }}</div>
+        </div>
+    </div>
+    
+    <div id="products-wrap">
+        <div id="products-container">
+            <div class="product-item" *ngFor="let item of items">
+                <i class="{{item.icon}}"></i>
+                <div class="product-content">
+                    <h3 class="product-title">{{ item.title }}</h3>
+                    <div>{{ item.description }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
