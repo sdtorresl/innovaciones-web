@@ -1,12 +1,12 @@
 <div id="contact-us" class="container">
-  
+
 
   <div id="contact-form" class="row">
-    
+
     <aside id="contact-data-wrapper" class="col-sm-12 col-md-6 d-none d-flex flex-column justify-content-center">
       <div class="container">
         <h3 id="title">Contáctanos</h3>
-    
+
         <div class="contact-data">
           <p class="location">Colombia (Medellín, Bogotá, Pereira)</p>
           <p class="phone">(+57) 3154427962</p>
@@ -27,10 +27,10 @@
       </div>
       <form [formGroup]="contactForm" (ngSubmit)="submit()">
         <div class="form-group row">
-          <input 
+          <input
               #nameInput
               (change)="true"
-              type="text" 
+              type="text"
               class="form-control"
               id="name"
               [class.invalid]="nameInvalid"
@@ -39,10 +39,10 @@
           <small *ngIf="nameInvalid" class="text-danger">Ingresa tu nombre completo</small>
         </div>
         <div class="form-group row">
-          <input 
+          <input
               #phoneInput
               (change)="true"
-              type="tel" 
+              type="tel"
               class="form-control"
               id="phone"
               [class.invalid]="phoneInvalid"
@@ -51,10 +51,10 @@
           <small *ngIf="phoneInvalid" class="text-danger">Ingresa un teléfono válido</small>
         </div>
         <div class="form-group row">
-          <input 
+          <input
               #emailInput
               (change)="true"
-              type="mail" 
+              type="mail"
               class="form-control"
               id="email"
               [class.invalid]="emailInvalid"
@@ -63,10 +63,10 @@
           <small *ngIf="emailInvalid" class="text-danger">Ingresa un correo válido</small>
         </div>
         <div class="form-group row">
-          <textarea 
+          <textarea
               #messageInput
               (change)="true"
-              rows="3" 
+              rows="3"
               class="form-control"
               id="message"
               [class.invalid]="messageInvalid"
@@ -76,7 +76,7 @@
         </div>
 
         <div class="d-flex justify-content-center mt-4 row">
-          <button type="submit" class="submit btn btn-primary">Quiero transformar mi negocio <i class="fal fa-chevron-right"></i></button>
+          <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">Contactar <i class="fal fa-chevron-right"></i></button>
         </div>
       </form>
     </div>
