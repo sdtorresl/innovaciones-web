@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { TopMenuComponent } from './components/shared/top-menu/top-menu.componen
 import { BannerComponent } from './components/banner/banner.component';
 import { AppearDirective } from './directives/appear.directive';
 import { ItemsComponent } from './components/items/items.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { ItemsComponent } from './components/items/items.component';
     TopMenuComponent,
     BannerComponent,
     AppearDirective,
-    ItemsComponent
+    ItemsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { ItemsComponent } from './components/items/items.component';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
