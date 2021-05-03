@@ -38,7 +38,7 @@ import { ItemsComponent } from './components/items/items.component';
     TopMenuComponent,
     BannerComponent,
     AppearDirective,
-    ItemsComponent
+    ItemsComponent,
   ],
   imports: [
     BrowserModule,
