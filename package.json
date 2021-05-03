@@ -22,13 +22,14 @@
     "@angular/router": "~10.2.3",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "bootstrap": "^4.5.3",
+    "ngx-drag-scroll": "^9.0.0-beta.4",
     "rxjs": "~6.6.3",
     "sweetalert2": "^10.10.4",
     "tslib": "^2.0.3",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1002.0",
+    "@angular-devkit/build-angular": "^0.1002.1",
     "@angular/cli": "^10.2.0",
     "@angular/compiler-cli": "~10.2.3",
     "@angular/language-service": "~10.2.3",
