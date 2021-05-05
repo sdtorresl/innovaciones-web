@@ -1,19 +1,55 @@
-h1 {
-    font-size: 1.5rem;
+@import "variables";
+
+#team-member-name {
+  text-transform: uppercase;
 }
 
 drag-scroll {
-    height: 400px;
+    height: 420px;
     margin: 0 15px;
 
     .team-member-item {
-        padding: 0 15px;
+        padding: 0 15px 25px 15px;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          bottom: 5px;
+          right: 200px;
+          left: 200px;
+          background-color: $primary-color;
+          transition: all 0.25s ease-in-out;
+        }
 
         img {
             height: 400px;
+            transition: all 0.5s ease-in-out;
+            transform: scale(0.9);
+            border: 2px solid transparent;
+
+            &:hover {
+              transform: scale(1);
+            }
+
+          }
+        &.active {
+          img {
+            transform: scale(1);
+            border-color: $primary-color;
+          }
+
+          &:before {
+            right: 70px;
+            left: 70px;
+            background-color: $primary-color;
+          }
         }
     }
 }
+
 .slide-button {
     i {
         font-size: 2rem;

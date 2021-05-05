@@ -3,40 +3,24 @@
 
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col col-md-4">
-                <h2 id="team-member-name">Sergio Daniel Torres</h2>
-                <p id="team-member-role">Gerente</p>
-                <p id="team-member-info">Ingeniero Electrónico<br>Universidad Nacional de Colombia</p>
+            <div class="col col-md-4 team-member-info">
+                <p id="team-member-name">{{ currentEmployee.name }}</p>
+                <p id="team-member-role">{{ currentEmployee.role }}</p>
+                <p id="team-member-career">{{ currentEmployee.career }}</p>
+                <p id="tean-member-college">{{ currentEmployee.college }}</p>
             </div>
             <div id="team-member-description" class="col-md-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum est ullam minus, quasi labore sint unde tenetur odit non assumenda neque laboriosam, iure quo minima inventore, adipisci autem hic.
+              {{ currentEmployee.profile }}
             </div>
         </div>
-        <div class="d-flex flex-row align-items-center justify-content-center">
+
+        <div class="d-flex flex-row align-items-center justify-content-center mt-5">
             <a (click)="moveLeft($event)" id="left-button" class="slide-button" href="#">
                 <i class="fal fa-chevron-left"></i>
             </a>
-            <drag-scroll [scrollbar-hidden]="true" #nav >
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sergio-torres.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/esperanza-linares.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sara-sanchez.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sergio-torres.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sergio-torres.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sergio-torres.png" alt="">
-                </div>
-                <div drag-scroll-item class="team-member-item">
-                    <img src="/assets/img/team/sergio-torres.png" alt="">
+            <drag-scroll [scrollbar-hidden]="true" #nav  >
+                <div drag-scroll-item class="team-member-item" [ngClass]="{'active': employee.name == currentEmployee.name}" (mouseenter)="changeEmployee(employee)" (click)="changeEmployee(employee)" *ngFor="let employee of employees">
+                    <img src="{{ employee.picture }}" alt="">
                 </div>
             </drag-scroll>
             <a (click)="moveRight($event)" id="right-button" class="slide-button" href="#">

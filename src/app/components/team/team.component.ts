@@ -1,3 +1,4 @@
+import { employees } from './../../models/employes';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 
@@ -7,9 +8,11 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
+  employees = employees;
+  currentEmployee = employees[0];
 
   @ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;
-  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +26,10 @@ export class TeamComponent implements OnInit {
   moveRight(event) {
     event.preventDefault();
     this.ds.moveRight();
+  }
+
+  changeEmployee(employee) {
+    this.currentEmployee = employee;
   }
 
 }
