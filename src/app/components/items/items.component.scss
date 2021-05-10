@@ -20,7 +20,6 @@
     align-items: center;
   }
 
-
   #products-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,9 +62,9 @@
     }
 
     .product-title::before {
-      content: '';
+      content: "";
       position: absolute;
-      background-image: linear-gradient(#5BFFF4, $primary-color);
+      background-image: linear-gradient(#5bfff4, $primary-color);
       height: 2px;
       bottom: -1px;
       left: 0px;
@@ -102,7 +101,6 @@
       .product-title {
         margin-left: 0px;
       }
-
     }
   }
 }

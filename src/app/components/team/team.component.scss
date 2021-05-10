@@ -1,57 +1,87 @@
 @import "variables";
 
+.team-member-info p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
 #team-member-name {
+  position: relative;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: $font;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(#5bfff4, #089adf);
+    height: 2px;
+    bottom: -1px;
+    left: 0px;
+    width: 30%;
+  }
+}
+
+#team-member-role {
+  //margin-bottom: 5px;
+  font-family: $font-bold;
 }
 
 drag-scroll {
-    height: 420px;
-    margin: 0 15px;
+  height: 425px;
+  margin: 0 15px;
 
-    .team-member-item {
-        padding: 0 15px 25px 15px;
-        cursor: pointer;
-        position: relative;
+  .team-member-item {
+    padding: 0 15px 25px 15px;
+    cursor: pointer;
+    position: relative;
 
-        &:before {
-          content: '';
-          position: absolute;
-          height: 2px;
-          bottom: 5px;
-          right: 200px;
-          left: 200px;
-          background-color: $primary-color;
-          transition: all 0.25s ease-in-out;
-        }
-
-        img {
-            height: 400px;
-            transition: all 0.5s ease-in-out;
-            transform: scale(0.9);
-            border: 2px solid transparent;
-
-            &:hover {
-              transform: scale(1);
-            }
-
-          }
-        &.active {
-          img {
-            transform: scale(1);
-            border-color: $primary-color;
-          }
-
-          &:before {
-            right: 70px;
-            left: 70px;
-            background-color: $primary-color;
-          }
-        }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      bottom: 5px;
+      right: 200px;
+      left: 200px;
+      background-image: linear-gradient(#5bfff4, #089adf);
+      transition: all 0.5s ease-in-out;
     }
+
+    img {
+      height: 400px;
+      transition: all 0.5s ease-in-out;
+      transform: scale(0.9);
+      filter: grayscale(75%);
+
+      &:hover {
+        transform: scale(1);
+        filter: grayscale(0);
+        box-shadow: 5px 5px 10px #ccc;
+      }
+    }
+
+    &.active {
+      img {
+        transform: scale(1);
+        box-shadow: 5px 5px 10px #ccc;
+        filter: grayscale(0);
+      }
+
+      &:before {
+        right: 70px;
+        left: 70px;
+        background-color: $primary-color;
+      }
+    }
+  }
 }
 
 .slide-button {
-    i {
-        font-size: 2rem;
-    }
+  i {
+    font-size: 2rem;
+  }
 }

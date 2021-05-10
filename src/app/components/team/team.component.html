@@ -1,31 +1,32 @@
 <aside id="team">
-    <h1>Nuestro equipo</h1>
+  <h1 class="mb-5">Nuestro equipo</h1>
 
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col col-md-4 team-member-info">
-                <p id="team-member-name">{{ currentEmployee.name }}</p>
-                <p id="team-member-role">{{ currentEmployee.role }}</p>
-                <p id="team-member-career">{{ currentEmployee.career }}</p>
-                <p id="tean-member-college">{{ currentEmployee.college }}</p>
-            </div>
-            <div id="team-member-description" class="col-md-8">
-              {{ currentEmployee.profile }}
-            </div>
+  <div class="container">
+    <div class="d-flex flex-row align-items-center justify-content-center mt-5">
+      <a (click)="moveLeft($event)" id="left-button" class="slide-button" href="#">
+        <i class="fal fa-chevron-left"></i>
+      </a>
+      <drag-scroll [scrollbar-hidden]="true" #nav>
+        <div drag-scroll-item class="team-member-item" [ngClass]="{'active': employee.name == currentEmployee.name}"
+          (mouseenter)="changeEmployee(employee)" (click)="changeEmployee(employee)" *ngFor="let employee of employees">
+          <img src="{{ employee.picture }}" alt="">
         </div>
-
-        <div class="d-flex flex-row align-items-center justify-content-center mt-5">
-            <a (click)="moveLeft($event)" id="left-button" class="slide-button" href="#">
-                <i class="fal fa-chevron-left"></i>
-            </a>
-            <drag-scroll [scrollbar-hidden]="true" #nav  >
-                <div drag-scroll-item class="team-member-item" [ngClass]="{'active': employee.name == currentEmployee.name}" (mouseenter)="changeEmployee(employee)" (click)="changeEmployee(employee)" *ngFor="let employee of employees">
-                    <img src="{{ employee.picture }}" alt="">
-                </div>
-            </drag-scroll>
-            <a (click)="moveRight($event)" id="right-button" class="slide-button" href="#">
-                <i class="fal fa-chevron-right"></i>
-            </a>
-        </div>
+      </drag-scroll>
+      <a (click)="moveRight($event)" id="right-button" class="slide-button" href="#">
+        <i class="fal fa-chevron-right"></i>
+      </a>
     </div>
+
+    <div class="row d-flex align-items-center mt-3">
+      <div class="col col-md-4 team-member-info">
+        <p id="team-member-name">{{ currentEmployee.name }}</p>
+        <p id="team-member-role">{{ currentEmployee.role }}</p>
+        <p id="team-member-career">{{ currentEmployee.career }}</p>
+        <p id="tean-member-college">{{ currentEmployee.college }}</p>
+      </div>
+      <div id="team-member-description" class="col-md-8">
+        {{ currentEmployee.profile }}
+      </div>
+    </div>
+  </div>
 </aside>
