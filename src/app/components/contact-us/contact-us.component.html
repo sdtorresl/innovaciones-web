@@ -3,7 +3,7 @@
 
   <div id="contact-form" class="row">
 
-    <aside id="contact-data-wrapper" class="col-sm-12 col-md-6 d-none d-flex flex-column justify-content-center">
+    <aside id="contact-data-wrapper" class="col-sm-12 col-md-6 d-none d-md-flex flex-column justify-content-center">
       <div class="container">
         <h3 id="title">Contáctanos</h3>
 
@@ -16,67 +16,46 @@
       </div>
     </aside>
 
-    <div class="col-sm-12 col-md-4 offset-1 mb-5 d-flex flex-column justify-content-center">
-      <div class="row mt-5">
+    <div class="col-sm-12 col-md-4 offset-md-1 mb-5 d-flex flex-column justify-content-center">
+      <div class="mt-5">
         <div class="intro">
           <h2 class="black text-left">Encuentra la mejor solución para tu negocio</h2>
           <div class="row">
-            <p class="col">Si deseas conocer más acerca de nuestros servicios, puedes contactarte con nuestro equipo, diligenciando el formulario. Atenderemos personalmente tus inquietudes de la manera mas pronta posible.</p>
+            <p class="col">Si deseas conocer más acerca de nuestros servicios, puedes contactarte con nuestro equipo,
+              diligenciando el formulario. Atenderemos personalmente tus inquietudes de la manera mas pronta posible.
+            </p>
           </div>
         </div>
       </div>
-      <form [formGroup]="contactForm" (ngSubmit)="submit()">
+      <form class="col" [formGroup]="contactForm" (ngSubmit)="submit()">
         <div class="form-group row">
-          <input
-              #nameInput
-              (change)="true"
-              type="text"
-              class="form-control"
-              id="name"
-              [class.invalid]="nameInvalid"
-              formControlName="name">
+          <input #nameInput (change)="true" type="text" class="form-control" id="name" [class.invalid]="nameInvalid"
+            formControlName="name">
           <label for="name" [class.active]="nameInput.value">Nombre</label>
           <small *ngIf="nameInvalid" class="text-danger">Ingresa tu nombre completo</small>
         </div>
         <div class="form-group row">
-          <input
-              #phoneInput
-              (change)="true"
-              type="tel"
-              class="form-control"
-              id="phone"
-              [class.invalid]="phoneInvalid"
-              formControlName="phone">
+          <input #phoneInput (change)="true" type="tel" class="form-control" id="phone" [class.invalid]="phoneInvalid"
+            formControlName="phone">
           <label for="phone" [class.active]="phoneInput.value">Teléfono</label>
           <small *ngIf="phoneInvalid" class="text-danger">Ingresa un teléfono válido</small>
         </div>
         <div class="form-group row">
-          <input
-              #emailInput
-              (change)="true"
-              type="mail"
-              class="form-control"
-              id="email"
-              [class.invalid]="emailInvalid"
-              formControlName="email">
+          <input #emailInput (change)="true" type="mail" class="form-control" id="email" [class.invalid]="emailInvalid"
+            formControlName="email">
           <label for="email" [class.active]="emailInput.value">Correo electrónico</label>
           <small *ngIf="emailInvalid" class="text-danger">Ingresa un correo válido</small>
         </div>
         <div class="form-group row">
-          <textarea
-              #messageInput
-              (change)="true"
-              rows="3"
-              class="form-control"
-              id="message"
-              [class.invalid]="messageInvalid"
-              formControlName="message"></textarea>
+          <textarea #messageInput (change)="true" rows="3" class="form-control" id="message"
+            [class.invalid]="messageInvalid" formControlName="message"></textarea>
           <label for="message" [class.active]="messageInput.value">Mensaje</label>
           <small *ngIf="messageInvalid" class="text-danger">Por favor, escribe tu mensaje</small>
         </div>
 
         <div class="d-flex justify-content-center mt-4 row">
-          <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">Contactar <i class="fal fa-chevron-right"></i></button>
+          <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">Contactar <i
+              class="fal fa-chevron-right"></i></button>
         </div>
       </form>
     </div>

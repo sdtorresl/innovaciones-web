@@ -1,149 +1,151 @@
-@import 'variables';
+@import "variables";
 
 %active-label {
-    color: $primary-color;
-    top: -0.5rem;
-    font-size: 0.8rem;
+  color: $primary-color;
+  top: -0.5rem;
+  font-size: 0.8rem;
 }
 
 .contact-data {
-    p {
-        margin-bottom: 0.1rem;
-        text-align: center;
-    }
+  p {
+    margin-bottom: 0.1rem;
+    text-align: center;
+  }
 }
 
 #title {
-    width: 100%;
+  width: 100%;
 }
 
 form {
-    .form-group {
-        position: relative;
+  .form-group {
+    position: relative;
 
-        label {
-            font-family: $font-bold;
-            position: absolute;
-            left: 0%;
-            top: 0.5rem;
-            font-size: 1rem;
-            color: $secondary-color-light;
-            transition: all 0.5s ease;
-            z-index: -1;
+    label {
+      font-family: $font-bold;
+      position: absolute;
+      left: 0%;
+      top: 0.5rem;
+      font-size: 1rem;
+      color: $secondary-color-light;
+      transition: all 0.5s ease;
+      z-index: -1;
 
-            &.active {
-                @extend %active-label;
-                color: black;
-            }
-        }
-
-        .form-control {
-            border: 0;
-            min-height: 40px;
-            border-bottom: 0.1rem solid $secondary-color-light;
-            border-radius: 0;
-            background: transparent;
-            padding: 10px 0px;
-            position: relative;
-
-            &.invalid {
-                border-color: $error-color;
-
-                &~.label, &+label {
-                    color: $error-color;
-                }
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                background: red;
-            }
-
-            &:focus {
-                border-bottom-color: $primary-color;
-                box-shadow: none;
-
-                ~ label, + label {
-                    @extend %active-label;
-                }
-            }
-        }
+      &.active {
+        @extend %active-label;
+        color: black;
+      }
     }
+
+    .form-control {
+      border: 0;
+      min-height: 40px;
+      border-bottom: 0.1rem solid $secondary-color-light;
+      border-radius: 0;
+      background: transparent;
+      padding: 10px 0px;
+      position: relative;
+
+      &.invalid {
+        border-color: $error-color;
+
+        & ~ .label,
+        & + label {
+          color: $error-color;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: red;
+      }
+
+      &:focus {
+        border-bottom-color: $primary-color;
+        box-shadow: none;
+
+        ~ label,
+        + label {
+          @extend %active-label;
+        }
+      }
+    }
+  }
 }
 
 @media #{$medium-and-up} {
-    #contact-us {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        margin: 0 -15px;
-        height: calc(100vh - 75px);
-    }
+  #contact-us {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 -15px;
+    height: calc(100vh - 75px);
+  }
 
-    #contact-data-wrapper {
-        background: url('/assets/img/notebook.jpg');
-        background-size: auto 100%;
-        background-position: 70% 0;
-        background-clip: content-box;
-        background-repeat: no-repeat;
+  #contact-data-wrapper {
+    background: url("/assets/img/notebook.jpg");
+    background-size: auto 100%;
+    background-position: 70% 0;
+    background-clip: content-box;
+    background-repeat: no-repeat;
 
-        .container {
-            margin: 0;
-            padding: 3rem 1rem 3rem 10rem;
-            background-color: black;
-            color: white;
-            position: relative;
+    .container {
+      margin: 0;
+      padding: 6rem 1rem 6rem 10rem;
+      background-color: black;
+      color: white;
+      position: relative;
 
-            &:after {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: -50px;
-                content: '';
-                width: 50px;
-                background-color: black;
-            }
-        }
-    }
-
-    .contact-data {
-        p {
-            margin-bottom: 0.2rem;
-            text-align: left;
-        }
-    }
-
-    #contact-form {
-        position: relative;
-        flex: 1;
-    }
-
-    #title {
-        transform-origin: 0% 100%;
-        border-bottom: 2px solid #515151;
-        margin: 22px -15px;
-        padding: 15px 25px;
+      &:after {
         position: absolute;
-        top: 55%;
-        transform: rotate(-90deg);
-        width: auto;
+        top: 0;
+        bottom: 0;
+        right: -50px;
+        content: "";
+        width: 50px;
+        background-color: black;
+      }
     }
+  }
+
+  .contact-data {
+    p {
+      margin-bottom: 0.2rem;
+      text-align: left;
+    }
+  }
+
+  #contact-form {
+    position: relative;
+    flex: 1;
+  }
+
+  #title {
+    transform-origin: 0% 100%;
+    border-bottom: 2px solid #515151;
+    margin: 22px -15px;
+    padding: 15px 25px;
+    position: absolute;
+    top: 55%;
+    transform: rotate(-90deg);
+    width: auto;
+  }
 }
 
 @media #{$large-and-up} {
-    #title {
-        transform-origin: 0% 100%;
-        border-bottom: 2px solid #515151;
-        margin: 23px -15px;
-        padding: 15px 18px;
-        position: absolute;
-        top: 55%;
-        transform: rotate(-90deg);
-        width: auto;
-    }
+  #title {
+    transform-origin: 0% 100%;
+    border-bottom: 2px solid #515151;
+    margin: 3rem -15px;
+    padding: 15px 18px;
+    position: absolute;
+    top: 55%;
+    transform: rotate(-90deg);
+    width: auto;
+  }
 }
