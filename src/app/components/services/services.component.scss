@@ -1,109 +1,123 @@
 @import "variables";
 
 #service {
-    margin: 0px;
-    max-width: 100%;
+  margin: 0px;
+  max-width: 100%;
 
-    #intro {
-        position: relative;
+  #intro {
+    position: relative;
 
-        #intro-img {
-            top: 0px;
-            left: 0px;
-            right: 30%;
-            bottom: 0px;
-            position: absolute;
-            background: url('/assets/img/desk.png') no-repeat;
-            background-size: cover;
-        }
-
-        #description {
-            background-image: linear-gradient(206.57deg, #5BFFF4 0%, #54C0E2 53.52%, $primary-color 100%);
-            padding: 60px 40px;
-        }
-
-        p {
-            padding-top: 8px;
-            padding-bottom: 50px;
-        }
-
-        .more {
-            font-family: $font-bold;
-            font-size: 1.2rem;
-            transition: 0.2s ease-in-out;
-        
-            &:hover {
-                padding-left: 30px;
-                //text-decoration: none;
-            }
-        }
+    #intro-img {
+      top: 0px;
+      left: 0px;
+      right: 30%;
+      bottom: 0px;
+      position: absolute;
+      background: url("/assets/img/desk.png") no-repeat;
+      background-size: cover;
     }
 
-    .item {
-        height: 310px;
-        border: 1px solid #D8D8D8;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 80px;
-        position: relative;
-
-        &:hover {
-            transition: 0.8s ease-out;
-            padding-top: 35px;
-            
-            .item-title {
-                opacity: 0;
-            }
-
-            .item-description {
-                transition: 0.8s all ease-out;
-                opacity: 1;
-                top: 115px;
-            }
-        }
+    #description {
+      background-image: linear-gradient(206.57deg, #5bfff4 0%, #54c0e2 53.52%, $primary-color 100%);
+      padding: 60px 40px;
     }
 
-    .item-description {
+    p {
+      padding-top: 8px;
+      padding-bottom: 50px;
+    }
+
+    .more {
+      font-family: $font-bold;
+      font-size: 1.2rem;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        padding-left: 30px;
+        //text-decoration: none;
+      }
+    }
+  }
+
+  .item {
+    height: 310px;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+
+    &:hover {
+      transition: 0.8s ease-out;
+      padding-top: 20px;
+
+      .item-title {
         opacity: 0;
-        position: absolute;
-        top: 160px;
-        max-width: 75%;
-        height: 160px;
-    }
-    
-    .item-title {
+      }
+
+      .item-description {
+        transition: 0.8s all ease-out;
         opacity: 1;
-        font-family: $font-bold;
-        text-transform: uppercase;
-        text-align: center;
-        position: relative;
-        width: min-content;
+        top: 95px;
+        height: 190px;
+      }
     }
+  }
 
-    .item-title::before {
-        content: '';
-        position: absolute;
-        background-image: linear-gradient(#5BFFF4, $primary-color);
-        height: 2px;
-        bottom: -10px;
-        left: 5px;
-        right: 5px;
-    }
+  .item-description {
+    opacity: 0;
+    position: absolute;
+    top: 160px;
+    max-width: 75%;
+    height: 160px;
+  }
 
-    i {
-        font-size: 35px;
-        margin: 20px;
-    }
+  .item-title {
+    opacity: 1;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    width: min-content;
+  }
 
-    #laptop-img {
-        background: url('/assets/img/laptop.png') no-repeat right;
-        background-size: cover;
-    }
+  .item-title::before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(#5bfff4, $primary-color);
+    height: 2px;
+    bottom: -10px;
+    left: 5px;
+    right: 5px;
+  }
+
+  i {
+    font-size: 35px;
+    margin: 20px;
+  }
+
+  #laptop-img {
+    background: url("/assets/img/laptop.png") no-repeat right;
+    background-size: cover;
+  }
 }
 
 @media #{$medium-and-up} {
-    #intro {
-        padding-top: 90px;
+  #intro {
+    padding-top: 90px;
+  }
+}
+
+@media #{large-and-up} {
+  .item {
+    &:hover {
+      padding-top: 35px;
+
+      .item-description {
+        top: 115px;
+        height: 180px;
+      }
     }
+  }
 }

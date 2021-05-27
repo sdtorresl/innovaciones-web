@@ -7,16 +7,19 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./project-item.component.scss']
 })
 export class ProjectItemComponent implements OnInit {
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
   @Input() title: string;
+  @Input() description: string;
+  @Input() pictures: string[];
   closeResult = '';
 
   ngOnInit(): void {
+    console.log(this.pictures);
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
