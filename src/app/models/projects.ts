@@ -25,16 +25,17 @@ export const projects = [
   {
     title: 'Ejército',
     short_description: 'Rediseño de los portales del ejército',
-    description: '',
-    thumbnail: 'assets/img/projects/ICFES/thumbnail.png',
+    description: 'Apoyamos a la empresa ADA en el proceso de rediseño de los sitios y micrositios del Ejército de Colombia.',
+    thumbnail: 'assets/img/projects/Ejercito/thumbnail.png',
     pictures: [
-      'assets/img/projects/ICFES/icfes-1.png',
-      'assets/img/projects/ICFES/icfes-2.png',
-      'assets/img/projects/ICFES/icfes-3.png'
+      'assets/img/projects/Ejercito/ejercito-1.png',
+      'assets/img/projects/Ejercito/ejercito-2.png',
+      'assets/img/projects/Ejercito/ejercito-3.png',
+      'assets/img/projects/Ejercito/ejercito-4.png'
     ]
   },
   {
-    title: 'ICFES',
+    title: 'Seed EM: Seminario Internacional ICFES',
     short_description: 'Aplicación móvil para el Seminario Internacional ICFES 2020',
     description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil que permitiese acceder a los contenidos del Seminario Internacional ICFES 2020',
     thumbnail: 'assets/img/projects/Icfes/thumbnail.jpg',
@@ -49,7 +50,7 @@ export const projects = [
     ]
   },
   {
-    title: 'Viva App',
+    title: 'Seed EM: Viva App',
     short_description: 'Aplicación móvil para la cadena de centros comerciales Viva',
     description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil diseñada a la medida de los requrimientos de la cadena de centros comerciales Viva en respuesta a las medidas adoptadas durante la pandemia.',
     thumbnail: 'assets/img/projects/Viva/thumbnail.png',
@@ -84,12 +85,13 @@ export const projects = [
   {
     title: 'Transconsult',
     short_description: 'Consultoría, diseño y desarrollo de una solución de inventarios',
-    description: 'Actuamos como consultores e implementadores de una solución de inventarios para el sistema de transporte masivo Transmilenio.',
+    description: 'Actuamos como consultores y desarrolladores de una solución de inventarios para el sistema de transporte masivo Transmilenio.',
     thumbnail: 'assets/img/projects/Transconsult/thumbnail.png',
     pictures: [
       'assets/img/projects/Transconsult/transconsult-1.png',
       'assets/img/projects/Transconsult/transconsult-2.png',
-      'assets/img/projects/Transconsult/transconsult-3.png'
+      'assets/img/projects/Transconsult/transconsult-3.png',
+      'assets/img/projects/Transconsult/transconsult-4.png'
     ]
   },
   {
