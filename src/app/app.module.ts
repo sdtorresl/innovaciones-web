@@ -14,7 +14,6 @@ import { DesignProcessComponent } from './components/design-process/design-proce
 import { HomeComponent } from './components/home/home.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ServiceItemComponent } from './components/service-item/service-item.component';
 import { ServicesComponent } from './components/services/services.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
@@ -33,7 +32,6 @@ import { TeamComponent } from './components/team/team.component';
     HomeComponent,
     ProjectItemComponent,
     ProjectsComponent,
-    ServiceItemComponent,
     ServicesComponent,
     SliderComponent,
     SolutionsComponent,

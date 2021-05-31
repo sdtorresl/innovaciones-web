@@ -8,27 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class SolutionsComponent implements OnInit {
 
   intro = 'En Innovaciones creamos productos digitales para impulsar tu negocio';
-  
+
   services = [
     {
       'title': 'Consultorias',
       'icon': 'fal fa-user-alt',
-      'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.'
+      'description': 'Somos expertos en UX y TI. ¿Necesitas ayuda? cuenta con la experiencia de nuestros profesionales para acelerar la transformación digital de tu empresa.'
     },
     {
       'title': 'Desarrollo de aplicaciones',
       'icon': 'fal fa-mobile',
-      'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.'
+      'description': 'Diseñamos y desarrollamos e implementamos aplicaciones web y móviles de acuerdo a los requerimientos de tu empresa.'
     },
     {
       'title': 'Diseño e imagen corporativa',
       'icon': 'fal fa-ruler',
-      'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.'
+      'description': 'No solamente diseñamos, recolectamos información y ponemos a prueba la experiencia de usuario para garantizar que la información se transmite adecuadamente.'
     },
     {
       'title': 'Soporte y mantenimiento',
       'icon': 'fal fa-wrench',
-      'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deleniti eos voluptatum exercitationem sit recusandae quae provident rerum beatae.'
+      'description': 'Déjanos el monitoreo, la operación, el soporte y mantenimiento en manos profesionales mientras te enfocas en lo que realmente es importante.'
     }
   ];
 
