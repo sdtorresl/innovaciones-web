@@ -46,5 +46,5 @@ testem.log
 Thumbs.db
 
 # NPM
-.package-lock.json
+package-lock.json
 
