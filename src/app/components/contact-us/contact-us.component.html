@@ -27,7 +27,7 @@
           </div>
         </div>
       </div>
-      <form class="col" [formGroup]="contactForm" (ngSubmit)="submit()">
+      <form class="col" [formGroup]="contactForm" (ngSubmit)="validateForm()">
         <div class="form-group row">
           <input #nameInput (change)="true" type="text" class="form-control" id="name" [class.invalid]="nameInvalid"
             formControlName="name">
@@ -50,12 +50,14 @@
           <textarea #messageInput (change)="true" rows="3" class="form-control" id="message"
             [class.invalid]="messageInvalid" formControlName="message"></textarea>
           <label for="message" [class.active]="messageInput.value">Mensaje</label>
-          <small *ngIf="messageInvalid" class="text-danger">Por favor, escribe tu mensaje</small>
+          <small *ngIf="messageInvalid" class="text-danger">Por favor, escribe tu mensaje. La longitud mínima es de 10
+            caracteres.</small>
         </div>
 
         <div class="d-flex justify-content-center mt-4 row">
-          <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">Contactar <i
-              class="fal fa-chevron-right"></i></button>
+          <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">
+            Contactar <i class="fal fa-chevron-right"></i>
+          </button>
         </div>
       </form>
     </div>

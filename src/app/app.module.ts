@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DragScrollModule } from 'ngx-drag-scroll';
+import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 
 import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
@@ -51,12 +52,17 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ReactiveFormsModule,
     HttpClientModule,
     DragScrollModule,
+    RecaptchaV3Module,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
+    },
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: '6Lcg9AcbAAAAAOrx_KZnCaZLXGkkXSfPoQ-i70q8'
     }
   ],
   bootstrap: [AppComponent]
