@@ -3,16 +3,18 @@
 ::ng-deep {
     .carousel-caption {
         position: absolute;
-        right: 40%;
-        top: 0;
+        right: 0;
         left: 0;
+        top: 0;
         bottom: 0;
         z-index: 10;
         padding: 10% 10% 10% 12.5%;
         color: black;
         text-align: left;
-        background-image: -moz-linear-gradient(left, rgba(255,255,255,0.9) 0%,  rgba(255,255,255,0.8) 60%, rgba(0,0,0,0) 100%);
-        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 85%;
+        //background-image: -moz-linear-gradient(left, rgba(255,255,255,0.9) 0%,  rgba(255,255,255,0.5) 60%, rgba(0,0,0,0) 90%);
 
         h3 {
             text-align: left;
@@ -48,7 +50,7 @@
     .carousel-control-prev, .carousel-control-next {
         cursor: pointer;
     }
-    
+
     .carousel-item {
         display: block !important;
         z-index: 1;
@@ -56,12 +58,16 @@
         transition: 1s linear all;
         opacity: 0;
         visibility: hidden;
-        max-height: 500px;
+        height: 450px;
 
         &.active {
             position: relative;
             visibility: visible;
             opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+          height: 500px;
         }
     }
 }

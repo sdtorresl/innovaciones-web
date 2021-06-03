@@ -1,14 +1,20 @@
-<ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-  <ng-template ngbSlide *ngFor="let img of images; index as i">
-    <div class="carousel-caption">
-      <h3>Soluciones integrales a su medida</h3>
-      <p>Innovaciones es una empresa comprometida con apoyar el proceso de transformación digital de su negocio brindando soluciones de la más alta calidad ajustadas a su presupuesto</p>
-      <a href="" class="read-more">Conocer las soluciones</a>
+<ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ng-template ngbSlide *ngFor="let carousel of carouselHome; index as i">
+    <div class="carousel-caption" [style.background-image]="'url(' + carousel.image + ')'">
+      <div class="row">
+        <div class="col-12 col-md-10 col-lg-8">
+          <h3>{{carousel.title}}</h3>
+          <p>{{carousel.description}}</p>
+          <a href="/solutions" class="read-more">Conocer las soluciones</a>
+        </div>
+      </div>
     </div>
+    <!--
     <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
       <div class="picsum-img-wrapper">
-        <img [src]="img" alt="My image {{i + 1}} description">
+        <img [src]="carousel.image" alt="My image {{i + 1}} description">
       </div>
     </a>
+    -->
   </ng-template>
 </ngb-carousel>
