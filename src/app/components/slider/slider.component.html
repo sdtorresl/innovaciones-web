@@ -1,6 +1,8 @@
 <ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
   <ng-template ngbSlide *ngFor="let carousel of carouselHome; index as i">
     <div class="carousel-caption" [style.background-image]="'url(' + carousel.image + ')'">
+      <div class="gradient">
+      </div>
       <div class="row">
         <div class="col-12 col-md-10 col-lg-8">
           <h3>{{carousel.title}}</h3>
