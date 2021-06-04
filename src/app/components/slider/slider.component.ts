@@ -1,3 +1,4 @@
+import { carouselHome } from './../../models/carousel-home';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
@@ -7,7 +8,7 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  carouselHome = carouselHome;
 
   paused = false;
   unpauseOnArrow = false;

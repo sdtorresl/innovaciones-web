@@ -1,4 +1,4 @@
-import { employees } from './../../models/employes';
+import { employees } from '../../models/employees';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DragScrollComponent } from 'ngx-drag-scroll';
 
