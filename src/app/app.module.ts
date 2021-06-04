@@ -3,8 +3,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DragScrollModule } from 'ngx-drag-scroll';
+import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
 
 import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
@@ -14,7 +15,6 @@ import { DesignProcessComponent } from './components/design-process/design-proce
 import { HomeComponent } from './components/home/home.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ServiceItemComponent } from './components/service-item/service-item.component';
 import { ServicesComponent } from './components/services/services.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
@@ -23,6 +23,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AppearDirective } from './directives/appear.directive';
 import { ItemsComponent } from './components/items/items.component';
 import { TeamComponent } from './components/team/team.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,6 @@ import { TeamComponent } from './components/team/team.component';
     HomeComponent,
     ProjectItemComponent,
     ProjectsComponent,
-    ServiceItemComponent,
     ServicesComponent,
     SliderComponent,
     SolutionsComponent,
@@ -51,9 +51,20 @@ import { TeamComponent } from './components/team/team.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    DragScrollModule
+    DragScrollModule,
+    RecaptchaV3Module,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: '6Lcg9AcbAAAAAOrx_KZnCaZLXGkkXSfPoQ-i70q8'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

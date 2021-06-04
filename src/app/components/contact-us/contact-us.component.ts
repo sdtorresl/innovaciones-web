@@ -1,38 +1,54 @@
 import {
   Component,
+  OnDestroy,
   OnInit
 } from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
-  Validators
+  Validators,
+  FormControl
 } from '@angular/forms';
 import {
   ContactService
 } from 'src/app/services/contact.service';
 import Swal from 'sweetalert2';
+import { OnExecuteData, ReCaptchaV3Service } from 'ng-recaptcha';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
-export class ContactUsComponent implements OnInit {
-
+export class ContactUsComponent implements OnInit, OnDestroy {
+  private subscription: Subscription;
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private recaptchaV3Service: ReCaptchaV3Service) {
     this.buildForm();
   }
 
-  ngOnInit(): void {}
+  public ngOnInit() {
+    this.subscription = this.recaptchaV3Service.onExecute
+      .subscribe((data: OnExecuteData) => {
+        console.log('Data: ', data);
+      });
+  }
+
+  public ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 
   buildForm() {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(5)]],
       phone: ['', [Validators.minLength(7), Validators.maxLength(15)]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', [Validators.required, Validators.minLength(10)]],
+      recaptcha: ['']
     });
   }
 
@@ -65,6 +81,21 @@ export class ContactUsComponent implements OnInit {
     }
   }
 
+  validateForm() {
+    this.recaptchaV3Service.execute('submit')
+      .subscribe((token) => {
+        this.contactForm.patchValue({
+          recaptcha: token
+        });
+
+        this.submit();
+      },
+        (error) => {
+          //this.contactForm.setErrors(new ValidationErrors.)
+        }
+      );
+  }
+
   get nameInvalid() {
     return this.contactForm.get('name').invalid && this.contactForm.get('name').touched;
   }
@@ -80,4 +111,5 @@ export class ContactUsComponent implements OnInit {
   get emailInvalid() {
     return this.contactForm.get('email').invalid && this.contactForm.get('email').touched;
   }
+
 }

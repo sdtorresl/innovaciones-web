@@ -8,11 +8,9 @@ import { map } from 'rxjs/operators';
 export class ContactService {
   private url = 'http://localhost:5000/api/v1/contact';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   sendContact(body: any) {
-    console.log(`Body: ${JSON.stringify(body)} `);
-
     return this.http.post(this.url, body).pipe(
       map(
         (response) => {

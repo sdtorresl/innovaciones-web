@@ -22,6 +22,7 @@
     "@angular/router": "~10.2.3",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "bootstrap": "^4.5.3",
+    "ng-recaptcha": "^8.0.0",
     "ngx-drag-scroll": "^11.0.0-beta.1",
     "rxjs": "~6.6.3",
     "sweetalert2": "^10.10.4",
