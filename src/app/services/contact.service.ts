@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
-  private url = 'http://localhost:5000/api/v1/contact';
+  private url = 'https://api.innovaciones.co/api/v1/contact';
 
   constructor(private http: HttpClient) { }
 

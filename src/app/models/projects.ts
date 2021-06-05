@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Mi Promotora',
     short_description: 'Aplicación móvil para gestión de ventas',
-    description: 'Desarrollamos una aplicación móvil administrada a través de una aplicación web. El sistema permite a los asesores de mi promotora acceder a contenido informativo, consultar información relevante, hacer solicitudes y obtener el progreso de sus ventas.',
+    description: 'Desarrollamos una aplicación móvil administrada a través de un CMS. El sistema permite a los asesores de mi promotora acceder a contenido informativo, consultar información relevante, hacer solicitudes y obtener el progreso de sus ventas.',
     thumbnail: 'assets/img/projects/Promotora/thumbnail.jpeg',
     pictures: [
       // 'assets/img/projects/Promotora/promotora-1.jpeg',
@@ -12,20 +12,9 @@ export const projects = [
     ]
   },
   {
-    title: 'Mi Promotora',
-    short_description: 'Aplicación móvil para gestión de ventas',
-    description: 'Desarrollamos una aplicación móvil administrada a través de una aplicación web. El sistema permite a los asesores de mi promotora acceder a contenido informativo, consultar información relevante, hacer solicitudes y obtener el progreso de sus ventas.',
-    thumbnail: 'assets/img/projects/Promotora/thumbnail.png',
-    pictures: [
-      'assets/img/projects/Promotora/promotora-1.png',
-      'assets/img/projects/Promotora/promotora-2.png',
-      'assets/img/projects/Promotora/promotora-3.png'
-    ]
-  },
-  {
-    title: 'Ejército',
+    title: 'Ejército Nacional',
     short_description: 'Rediseño de los portales del ejército',
-    description: 'Apoyamos a la empresa ADA en el proceso de rediseño de los sitios y micrositios del Ejército de Colombia.',
+    description: 'Apoyamos a la empresa ADA en el proceso de rediseño de los sitios y micrositios del Ejército Nacional de Colombia.',
     thumbnail: 'assets/img/projects/Ejercito/thumbnail.png',
     pictures: [
       'assets/img/projects/Ejercito/ejercito-1.png',
@@ -49,21 +38,21 @@ export const projects = [
       'assets/img/projects/Icfes/icfes-7.jpg',
     ]
   },
-  {
-    title: 'Seed EM: Viva App',
-    short_description: 'Aplicación móvil para la cadena de centros comerciales Viva',
-    description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil diseñada a la medida de los requrimientos de la cadena de centros comerciales Viva en respuesta a las medidas adoptadas durante la pandemia.',
-    thumbnail: 'assets/img/projects/Viva/thumbnail.png',
-    pictures: [
-      'assets/img/projects/Viva/viva-1.png',
-      'assets/img/projects/Viva/viva-2.png',
-      'assets/img/projects/Viva/viva-3.png'
-    ]
-  },
+  // {
+  //   title: 'Seed EM: Viva App',
+  //   short_description: 'Aplicación móvil para la cadena de centros comerciales Viva',
+  //   description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil diseñada a la medida de los requrimientos de la cadena de centros comerciales Viva en respuesta a las medidas adoptadas durante la pandemia.',
+  //   thumbnail: 'assets/img/projects/Viva/thumbnail.png',
+  //   pictures: [
+  //     'assets/img/projects/Viva/viva-1.png',
+  //     'assets/img/projects/Viva/viva-2.png',
+  //     'assets/img/projects/Viva/viva-3.png'
+  //   ]
+  // },
   {
     title: 'Danalvial',
-    short_description: 'Un diseño llamativo para un novedoso proyecto que invita a conocer lo mejor del cine colombiano.',
-    description: 'Un diseño llamativo para un novedoso proyecto que invita a conocer lo mejor del cine colombiano.',
+    short_description: 'Una página web administrada para una empresa de enseñanza automotriz.',
+    description: 'Desarrollamos una página web administrada, desarrollada a la medida para facilitar el acceso a la información de los nuevos clientes y la administración de estudiantes activos.',
     thumbnail: 'assets/img/projects/Danalvial/thumbnail.jpg',
     pictures: [
       'assets/img/projects/Danalvial/danalvial-1.jpg',
@@ -98,7 +87,7 @@ export const projects = [
     title: 'Algar Tech',
     short_description: 'Consultoría y desarrollo de aplicaciones web y móviles',
     description: 'Prestamos el servicio de consultoría y desarrollo de varias aplicaciones web, móviles y de bases de datos para diferentes proyectos',
-    thumbnail: 'assets/img/projects/Algar/thumbnail.png',
+    thumbnail: 'https://algartech.com/wp-content/uploads/2020/07/Logo-Branca.svg',
     pictures: [
 
     ]
