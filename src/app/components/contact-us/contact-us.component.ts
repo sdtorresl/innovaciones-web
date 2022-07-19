@@ -24,6 +24,7 @@ import { Subscription } from 'rxjs';
 export class ContactUsComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   contactForm: FormGroup;
+  isLoading: boolean = false;
 
   constructor(private fb: FormBuilder, private contactService: ContactService, private recaptchaV3Service: ReCaptchaV3Service) {
     this.buildForm();
@@ -55,8 +56,10 @@ export class ContactUsComponent implements OnInit, OnDestroy {
   submit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
-      this.contactService.sendContact(formData).subscribe(
-        resp => {
+      this.isLoading = true;
+
+      const sendContactObserver = {
+        next: (resp) => {
           console.log(JSON.stringify(resp));
           Swal.fire({
             title: `Gracias por contactarnos, ${formData.name.split(' ')[0]}`,
@@ -68,7 +71,7 @@ export class ContactUsComponent implements OnInit, OnDestroy {
             }
           });
         },
-        error => {
+        error: error => {
           console.log(JSON.stringify(error));
           Swal.fire({
             title: `Lo sentimos`,
@@ -76,24 +79,29 @@ export class ContactUsComponent implements OnInit, OnDestroy {
             icon: 'error',
             confirmButtonText: 'Aceptar'
           });
-        }
-      );
+        },
+        complete: () => {
+          this.isLoading = false
+        },
+      };
+
+      this.contactService.sendContact(formData).subscribe(sendContactObserver);
     }
   }
 
   validateForm() {
-    this.recaptchaV3Service.execute('submit')
-      .subscribe((token) => {
+    const captchaObserver = {
+      next: (token) => {
         this.contactForm.patchValue({
           recaptcha: token
         });
 
         this.submit();
       },
-        (error) => {
-          //this.contactForm.setErrors(new ValidationErrors.)
-        }
-      );
+    }
+
+    this.recaptchaV3Service.execute('submit')
+      .subscribe(captchaObserver);
   }
 
   get nameInvalid() {
