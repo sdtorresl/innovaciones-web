@@ -102,10 +102,11 @@ figure {
     }
   }
 
-  &:disabled {
-    background: none;
-    color: gray;
-    border-color: gray;
+  &:disabled,
+  &[disabled] {
+    background: none !important;
+    color: gray !important;
+    border-color: gray !important;
   }
 
   i {

@@ -56,7 +56,12 @@
 
         <div class="d-flex justify-content-center mt-4">
           <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">
-            Contactar <i class="fal fa-chevron-right"></i>
+            <div class="spinner-border" role="status" *ngIf="isLoading; else text">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <ng-template #text>
+              Contactar <i class="fal fa-chevron-right"></i>
+            </ng-template>
           </button>
         </div>
       </form>
