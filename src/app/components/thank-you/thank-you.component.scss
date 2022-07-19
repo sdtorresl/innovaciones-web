@@ -1,0 +1,35 @@
+@import "variables";
+
+#title {
+    width: 100%;
+}
+
+@media #{$medium-and-up} {
+    #thank-you {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 -15px;
+        height: calc(100vh - 75px);
+    }
+
+    #message {
+        position: relative;
+        flex: 1;
+
+        #message-image {
+            background: url("/assets/img/contact-flatlay.jpg");
+            background-size: auto 100%;
+            background-position: 70% 0;
+            background-clip: content-box;
+            background-repeat: no-repeat;
+        }
+
+        #message-data {
+            p {
+                margin-bottom: 0.2rem;
+                text-align: left;
+            }
+        }
+    }
+}

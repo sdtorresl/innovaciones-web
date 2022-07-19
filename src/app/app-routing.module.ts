@@ -4,12 +4,14 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { HomeComponent } from './components/home/home.component';
 import { SolutionsComponent } from './components/solutions/solutions.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { animation: 'home' } },
   { path: 'solutions', component: SolutionsComponent, data: { animation: 'solutions' } },
   { path: 'about', component: AboutComponent, data: { animation: 'about' } },
   { path: 'contact-us', component: ContactUsComponent, data: { animation: 'contact-us' } },
+  { path: 'thank-you', component: ThankYouComponent, data: { animation: 'contact-us' } },
 ];
 
 @NgModule({

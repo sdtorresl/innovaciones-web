@@ -1,0 +1,26 @@
+<div id="thank-you" class="container">
+    <div id="message" class="row">
+        <aside id="message-image" class="col-sm-12 col-md-6 d-none d-md-flex flex-column justify-content-center">
+        </aside>
+
+        <div class="col-sm-12 col-md-4 offset-md-1 mb-5 d-flex flex-column justify-content-center">
+            <div class="mt-5">
+                <div class="intro">
+                    <h2 class="black text-left" *ngIf="name; else genericTitle">{{name.split(' ')[0]}}, gracias por
+                        contactarnos</h2>
+                    <ng-template #genericTitle>
+                        <h2 class="black text-left">Gracias por contactarnos
+                        </h2>
+                    </ng-template>
+                    <div class="row mt-5 text-center">
+                        <p>Hemos recibido tu mensaje. Pronto un equipo especializado se pondrá en contacto contigo.</p>
+                        <p>Mientras tanto, siéntete libre de conocer más acerca de nosotros.</p>
+                        <div class="d-flex justify-content-center mt-2">
+                            <a routerLink="/about" class="button">Nuestro equipo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,6 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
-  FormControl
 } from '@angular/forms';
 import {
   ContactService
@@ -15,6 +14,7 @@ import {
 import Swal from 'sweetalert2';
 import { OnExecuteData, ReCaptchaV3Service } from 'ng-recaptcha';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-us',
@@ -26,14 +26,13 @@ export class ContactUsComponent implements OnInit, OnDestroy {
   contactForm: FormGroup;
   isLoading: boolean = false;
 
-  constructor(private fb: FormBuilder, private contactService: ContactService, private recaptchaV3Service: ReCaptchaV3Service) {
+  constructor(private fb: FormBuilder, private contactService: ContactService, private recaptchaV3Service: ReCaptchaV3Service, private router: Router) {
     this.buildForm();
   }
 
   public ngOnInit() {
     this.subscription = this.recaptchaV3Service.onExecute
       .subscribe((data: OnExecuteData) => {
-        console.log('Data: ', data);
       });
   }
 
@@ -61,7 +60,8 @@ export class ContactUsComponent implements OnInit, OnDestroy {
       const sendContactObserver = {
         next: (resp) => {
           console.log(JSON.stringify(resp));
-          Swal.fire({
+          this.router.navigate(['/thank-you', { 'name': formData.name }])
+          /* Swal.fire({
             title: `Gracias por contactarnos, ${formData.name.split(' ')[0]}`,
             text: `Tu mensaje ha sido enviado`,
             icon: 'success',
@@ -69,7 +69,7 @@ export class ContactUsComponent implements OnInit, OnDestroy {
             customClass: {
               confirmButton: 'confirm-button'
             }
-          });
+          }); */
         },
         error: error => {
           console.log(JSON.stringify(error));

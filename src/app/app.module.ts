@@ -24,6 +24,7 @@ import { AppearDirective } from './directives/appear.directive';
 import { ItemsComponent } from './components/items/items.component';
 import { TeamComponent } from './components/team/team.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     AppearDirective,
     ItemsComponent,
     TeamComponent,
+    ThankYouComponent,
   ],
   imports: [
     BrowserModule,
