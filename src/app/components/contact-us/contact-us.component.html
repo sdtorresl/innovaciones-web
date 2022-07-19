@@ -28,25 +28,25 @@
         </div>
       </div>
       <form class="col" [formGroup]="contactForm" (ngSubmit)="validateForm()">
-        <div class="form-group row">
+        <div class="form-group row mt-3">
           <input #nameInput (change)="true" type="text" class="form-control" id="name" [class.invalid]="nameInvalid"
             formControlName="name">
           <label for="name" [class.active]="nameInput.value">Nombre</label>
           <small *ngIf="nameInvalid" class="text-danger">Ingresa tu nombre completo</small>
         </div>
-        <div class="form-group row">
+        <div class="form-group row mt-3">
           <input #phoneInput (change)="true" type="tel" class="form-control" id="phone" [class.invalid]="phoneInvalid"
             formControlName="phone">
           <label for="phone" [class.active]="phoneInput.value">Teléfono</label>
           <small *ngIf="phoneInvalid" class="text-danger">Ingresa un teléfono válido</small>
         </div>
-        <div class="form-group row">
+        <div class="form-group row mt-3">
           <input #emailInput (change)="true" type="mail" class="form-control" id="email" [class.invalid]="emailInvalid"
             formControlName="email">
           <label for="email" [class.active]="emailInput.value">Correo electrónico</label>
           <small *ngIf="emailInvalid" class="text-danger">Ingresa un correo válido</small>
         </div>
-        <div class="form-group row">
+        <div class="form-group row mt-3">
           <textarea #messageInput (change)="true" rows="3" class="form-control" id="message"
             [class.invalid]="messageInvalid" formControlName="message"></textarea>
           <label for="message" [class.active]="messageInput.value">Mensaje</label>
@@ -54,7 +54,7 @@
             caracteres.</small>
         </div>
 
-        <div class="d-flex justify-content-center mt-4 row">
+        <div class="d-flex justify-content-center mt-4">
           <button [disabled]="!contactForm.valid" type="submit" class="submit btn btn-primary">
             Contactar <i class="fal fa-chevron-right"></i>
           </button>
