@@ -25,6 +25,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { TeamComponent } from './components/team/team.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ThankYouComponent } from './components/thank-you/thank-you.component';
     ItemsComponent,
     TeamComponent,
     ThankYouComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

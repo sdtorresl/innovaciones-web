@@ -17,7 +17,7 @@ import { startWith } from 'rxjs/operators';
 })
 export class AppearDirective implements AfterViewInit, OnDestroy {
   @Output()
-  appear: EventEmitter < void > ;
+  appear: EventEmitter<void>;
 
   elementPos: number;
   elementHeight: number;
@@ -29,7 +29,7 @@ export class AppearDirective implements AfterViewInit, OnDestroy {
   subscriptionResize: Subscription;
 
   constructor(private element: ElementRef) {
-    this.appear = new EventEmitter < void > ();
+    this.appear = new EventEmitter<void>();
   }
 
   saveDimensions() {

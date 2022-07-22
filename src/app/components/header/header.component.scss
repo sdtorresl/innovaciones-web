@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+@include keyframes(fade) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(bgposition) {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 85%;
+    }
+}
+@include keyframes(progressbar) {
+    0% {
+        background-position: 200% 100%;
+    }
+    25% {
+        background-position: 175% 100%;
+    }
+    75% {
+        background-position: 175% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+::ng-deep {
+    .carousel-caption {
+        padding: 10% 10% 10% 12.5%;
+        color: black;
+        text-align: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .gradient {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+            @include animate(fade, 1s, linear, 1);
+        }
+
+        .content {
+            position: relative;
+            max-width: 75%;
+            @include animate(fade, 2s, linear, 1);
+        }
+
+        h3 {
+            text-align: left;
+            position: relative;
+            padding-top: 1.5rem;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0;
+                width: 50%;
+                height: 3px;
+                background: linear-gradient(to right, #5bfff4 0%, #54c0e2 53%, #089adf 100%);
+                //@include animate(progressbar, 2s, linear, 1);
+            }
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+
+            &:hover {
+                border-color: $primary-color;
+            }
+        }
+    }
+}
