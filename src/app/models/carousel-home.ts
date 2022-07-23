@@ -1,4 +1,10 @@
-export const carouselHome = [
+export interface Slide {
+  title: string,
+  description: string
+  image: string
+}
+
+export const carouselHome: Slide[] = [
   {
     title: 'Soluciones integrales a su medida',
     description: 'Innovaciones es una empresa comprometida con apoyar el proceso de transformación digital de su negocio brindando soluciones de la más alta calidad ajustadas a su presupuesto',

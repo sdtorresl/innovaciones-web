@@ -1,11 +1,22 @@
 export const projects = [
   {
+    title: 'Cargo Corp UW',
+    short_description: 'Página web Cargo Corp UW',
+    description: 'Renovamos la página web de la empresa Cargo Corp UW, partiendo de las bases de datos anteriores y reutilizando el sistema de gestión de contenidos existente.',
+    thumbnail: 'assets/img/projects/Cargo/thumbnail.png',
+    pictures: [
+      'assets/img/projects/Cargo/cargo-1.png',
+      'assets/img/projects/Cargo/cargo-2.png',
+      'assets/img/projects/Cargo/cargo-3.png',
+    ]
+  },
+  {
     title: 'Mi Promotora',
     short_description: 'Aplicación móvil para gestión de ventas',
-    description: 'Desarrollamos una aplicación móvil administrada a través de un CMS. El sistema permite a los asesores de mi promotora acceder a contenido informativo, consultar información relevante, hacer solicitudes y obtener el progreso de sus ventas.',
+    description: 'Desarrollamos una aplicación móvil administrada a través de un CMS. El sistema permite a los asesores de Mi Promotora acceder a contenido informativo, consultar información relevante, hacer solicitudes y obtener el progreso de sus ventas.',
     thumbnail: 'assets/img/projects/Promotora/thumbnail.jpeg',
     pictures: [
-      // 'assets/img/projects/Promotora/promotora-1.jpeg',
+      'assets/img/projects/Promotora/promotora-1.jpeg',
       'assets/img/projects/Promotora/promotora-2.jpeg',
       'assets/img/projects/Promotora/promotora-3.jpeg',
       'assets/img/projects/Promotora/promotora-4.jpeg'
@@ -38,17 +49,17 @@ export const projects = [
       'assets/img/projects/Icfes/icfes-7.jpg',
     ]
   },
-  // {
-  //   title: 'Seed EM: Viva App',
-  //   short_description: 'Aplicación móvil para la cadena de centros comerciales Viva',
-  //   description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil diseñada a la medida de los requrimientos de la cadena de centros comerciales Viva en respuesta a las medidas adoptadas durante la pandemia.',
-  //   thumbnail: 'assets/img/projects/Viva/thumbnail.png',
-  //   pictures: [
-  //     'assets/img/projects/Viva/viva-1.png',
-  //     'assets/img/projects/Viva/viva-2.png',
-  //     'assets/img/projects/Viva/viva-3.png'
-  //   ]
-  // },
+  {
+    title: 'Seed EM: Viva App',
+    short_description: 'Aplicación móvil para la cadena de centros comerciales Viva',
+    description: 'Trabajamos en conjunto con Seed EM para proporcionar una aplicación móvil diseñada a la medida de los requrimientos de la cadena de centros comerciales Viva en respuesta a las medidas adoptadas durante la pandemia.',
+    thumbnail: 'assets/img/projects/Viva/thumbnail.png',
+    pictures: [
+      'assets/img/projects/Viva/viva-1.png',
+      'assets/img/projects/Viva/viva-2.png',
+      'assets/img/projects/Viva/viva-3.png'
+    ]
+  },
   {
     title: 'Danalvial',
     short_description: 'Una página web administrada para una empresa de enseñanza automotriz.',

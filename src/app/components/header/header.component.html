@@ -1,11 +1,16 @@
 <header>
-    <div class="carousel-caption" [style.background-image]="'url(' + carouselHome[0].image + ')'">
+    <div class="slider">
         <div class="gradient">
         </div>
+
+        <ng-container *ngFor="let slide of slides; let i = index">
+            <img class="header-image" *ngIf="i === currentSlide" [src]="slide.image" @carouselAnimation />
+        </ng-container>
+
         <div class="content row">
             <div class="col-12 col-md-10 col-lg-8">
-                <h3>{{carouselHome[0].title}}</h3>
-                <p>{{carouselHome[0].description}}</p>
+                <h3>{{slides[0].title}}</h3>
+                <p>{{slides[0].description}}</p>
                 <a href="/solutions" class="read-more">Conocer las soluciones</a>
             </div>
         </div>

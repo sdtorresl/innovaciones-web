@@ -18,6 +18,8 @@
 }
 
 form {
+  margin: 0 1rem;
+
   .form-group {
     position: relative;
 
@@ -79,6 +81,10 @@ form {
 }
 
 @media #{$medium-and-up} {
+  form {
+    margin: 0;
+  }
+
   #contact-us {
     display: flex;
     flex-direction: column;
