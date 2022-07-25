@@ -59,20 +59,9 @@ export class ContactUsComponent implements OnInit, OnDestroy {
 
       const sendContactObserver = {
         next: (resp) => {
-          console.log(JSON.stringify(resp));
           this.router.navigate(['/thank-you', { 'name': formData.name }])
-          /* Swal.fire({
-            title: `Gracias por contactarnos, ${formData.name.split(' ')[0]}`,
-            text: `Tu mensaje ha sido enviado`,
-            icon: 'success',
-            confirmButtonText: 'Aceptar',
-            customClass: {
-              confirmButton: 'confirm-button'
-            }
-          }); */
         },
         error: error => {
-          console.log(JSON.stringify(error));
           Swal.fire({
             title: `Lo sentimos`,
             text: `Hubo un error al enviar tu mensaje, intenta nuevemente más tarde`,

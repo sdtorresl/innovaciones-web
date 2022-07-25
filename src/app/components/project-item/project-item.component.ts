@@ -15,7 +15,6 @@ export class ProjectItemComponent implements OnInit {
   closeResult = '';
 
   ngOnInit(): void {
-    console.log(this.pictures);
   }
 
   open(content) {
